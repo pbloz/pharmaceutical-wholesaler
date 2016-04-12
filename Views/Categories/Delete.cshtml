@@ -1,0 +1,52 @@
+﻿@model Hurtownia.Models.Category
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/ManageLayout.cshtml";
+}
+<br />
+
+<h2>Usun</h2>
+<br />
+
+<h3>Czy na pewno chcesz usunac?</h3>
+<div>
+    <h4>Kategoria</h4>
+    <br/>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NameCategory)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameCategory)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IconFilename)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IconFilename)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

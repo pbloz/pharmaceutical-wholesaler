@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Hurtownia.Models.Product>
+@using Hurtownia.Infrastructure
+@{
+    ViewBag.Title = "Wysyłka";
+    Layout = "~/Views/Shared/RightSectionLayout.cshtml";
+}
+
+
+@Styles.Render("~/Content/css")
+<link href="@Url.Content("~/engine1/style.css")" rel="stylesheet" type="text/css" />
+
+@Html.Partial("_Logo")
+
+<br />
+<br />
+<h1 style="color:red;font-size:18px;"> Informacje o wysyłce</h1>
+<br />
+<div id="productlist-section">
+    <div class="div-opacity">
+        <section>
+
+            <div>
+              Złożone przez klienta zamówienia są realizowane w ciągu 14 dni od dnia otrzymania wpłaty na konto hurtowni.
+              Przesyłki są starannie pakowane w sposób zapewniający bezpieczny transport pod adres wskazany w trakcie zakupów.
+              Za dostarczenie zamówienia  odpowiedzialna jest wewnętrzna firma kurierska z wyspecjalizowanym personelem.
+              Do końca 2016 roku kupujący nie ponosi żadnych kosztów związanych z wysyłką leków. 
+                
+            </div>
+        </section>
+    </div>
+</div>
+<br />
+
+
+
+<script type="text/javascript" src="engine1/wowslider.js"></script>
+<script type="text/javascript" src="~/Content/bootstrap.css"></script>
+<script type="text/javascript" src="~/Content/bootstrap.min.css"></script>
+
+<script type="text/javascript" src="engine1/jquery.js"></script>
+<script type="text/javascript" src="engine1/wowslider.mod.js"></script>
+<script type="text/javascript" src="engine1/script.js"></script>
+@System.Web.Optimization.Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+
+
+
+
+
+
+
+

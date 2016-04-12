@@ -1,0 +1,77 @@
+﻿@model Hurtownia.Models.Order
+@{
+    ViewBag.Title = "Checkout";
+    Layout = "~/Views/Shared/RightSectionLayout.cshtml";
+}
+
+@section SectionTitle{
+    Uzupełnij Dane Zamówienia
+}
+
+
+@using (@Html.BeginForm("Checkout", "Cart"))
+{
+    <div style="text-align: center;">
+        <table id="password-table" style="margin-left: auto; margin-right: auto;">
+            <tr>
+                <td>@Html.LabelFor(o => o.FirstName, "Imię ")<b style="color:red"> *</b></td>
+                <td>@Html.TextBoxFor(o => o.FirstName, new { Class = "form-control" })</td>
+                <td>@Html.ValidationMessageFor(o => o.FirstName)</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(o => o.LastName, "Nazwisko ")<b style="color:red"> *</b></td>
+                <td>@Html.TextBoxFor(o => o.LastName, new { Class = "form-control" })</td>
+                <td>@Html.ValidationMessageFor(o => o.LastName)</td>
+            </tr>
+
+            <tr>
+                <td>@Html.LabelFor(o => o.Factory, "Firma")<b style="color:red"> *</b></td>
+                <td>@Html.TextBoxFor(o => o.Factory, new { Class = "form-control" })</td>
+                <td>@Html.ValidationMessageFor(o => o.Factory)</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(o => o.Nip, "Nip")<b style="color:red"> *</b></td>
+                <td>@Html.TextBoxFor(o => o.Nip, new { Class = "form-control" })</td>
+                <td>@Html.ValidationMessageFor(o => o.Nip)</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(o => o.Address, "Adres ")<b style="color:red"> *</b></td>
+                <td>@Html.TextBoxFor(o => o.Address, new { Class = "form-control" })</td>
+                <td>@Html.ValidationMessageFor(o => o.Address)</td>
+            </tr>
+
+            <tr>
+                <td>@Html.LabelFor(o => o.CodeAndCity, "Kod i miasto")<b style="color:red"> *</b></td>
+                <td>@Html.TextBoxFor(o => o.CodeAndCity, new { Class = "form-control" })</td>
+                <td>@Html.ValidationMessageFor(o => o.CodeAndCity)</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(o => o.PhoneNumber, "Numer telefonu")</td>
+                <td>@Html.TextBoxFor(o => o.PhoneNumber, new { Class = "form-control" })</td>
+                <td>@Html.ValidationMessageFor(o => o.PhoneNumber)</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(o => o.Email, "Adres e-mail")<b style="color:red"> *</b></td>
+                <td>@Html.TextBoxFor(o => o.Email, new { Class = "form-control" })</td>
+                <td>@Html.ValidationMessageFor(o => o.Email)</td>
+            </tr>
+            <tr>
+                <td><label for="comment">Uwagi</label></td>
+                <td>
+                    <textarea class="form-control" cols="40" rows="3" name="comment">@Model.Comment</textarea>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    @Html.ValidationSummary()
+    <span ><b style="color:red">*</b> - pola obowiązkowe do wypełnienia</span>
+    <hr style="margin-bottom: 50px;" />
+
+    <div class="section-button-container">
+        <a class="btn btn-info" href="" style="color:white;">Wróć</a>
+        <input type="submit" class="btn btn-info" style="" value="Potwierdź" />
+    </div>
+
+
+}

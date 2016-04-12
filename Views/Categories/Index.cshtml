@@ -1,0 +1,69 @@
+﻿@*@model IEnumerable<Hurtownia.Models.Category>*@
+@model PagedList.IPagedList<Hurtownia.Models.Category>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+
+@{
+    ViewBag.Title = "Category";
+    Layout = "~/Views/Shared/ManageLayout.cshtml";
+}
+
+<br />
+<br/>
+<h1><b style="color:red;font-size:18px;">Lista wszystkich kategorii w naszej aptece</b></h1>
+<br />
+<br />
+
+<p>
+    @Html.ActionLink("Utwórz nową kategorię", "Create")
+    
+</p>
+<br />
+<br />
+
+@using (Html.BeginForm("Index", "Category", FormMethod.Get))
+{ <p>
+        Wyszukaj : @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
+                         <input type="submit" value="Szukaj" />
+     
+
+    </p>
+}
+
+<br />
+<table class="table">
+    <tr>
+        <th> @Html.ActionLink("Nazwa", "Index", new { sortOrder = ViewBag.NameSortParm }) </th>
+
+        <th> @Html.ActionLink("Opis", "Index", new { sortOrder = ViewBag.DescriptionSortParm }) </th>
+
+        <th> @Html.ActionLink("Akcja", "Index", new { sortOrder = ViewBag.IconNameSortParm }) </th>
+
+
+    </tr>
+    
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NameCategory)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.IconFilename)
+            </td>*@
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.CategoryId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.CategoryId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.CategoryId })
+            </td>
+        </tr>
+    }
+
+</table>
+<br /> 
+Strona @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) z  @Model.PageCount
+@Html.PagedListPager(Model, page => Url.
+    Action("Index", new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))

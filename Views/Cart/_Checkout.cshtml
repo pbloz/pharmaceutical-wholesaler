@@ -1,0 +1,41 @@
+﻿@model Hurtownia.Models.Order
+
+<img src="@Server.MapPath("~/Content/Covers/1.png")" >
+
+@using (@Html.BeginForm("Checkout", "Cart"))
+{
+    <img src="@Server.MapPath("~/Content/Covers/1.png")"/>
+
+    <p>  @Model.FirstName</p>
+
+        <div class="page-breaker" style="display: block;clear: both;white-space: nowrap;">
+
+            @Model.LastName
+        </div>
+        <div class="page-breaker" style="display: block;clear: both;white-space: nowrap;">
+            @Model.Address
+        </div>
+        <div class="page-breaker" style="display: block;clear: both;white-space: nowrap;">
+            @Model.CodeAndCity
+        </div>
+        <div class="page-breaker" style="display: block;clear: both;white-space: nowrap;">
+            @Model.PhoneNumber
+        </div>
+        <div class="page-breaker" style="display: block;clear: both;white-space: nowrap;">
+            @Model.TotalPrice
+        </div>
+    @*</p>*@
+
+
+
+
+
+
+
+
+    @Html.ValidationSummary()
+
+    <hr style="margin-bottom: 50px;" />
+
+
+}

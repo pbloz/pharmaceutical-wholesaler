@@ -1,0 +1,129 @@
+﻿@*@model IEnumerable<Hurtownia.Models.Product>*@
+@model PagedList.IPagedList<Hurtownia.Models.Product>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css"
+      @{ ViewBag.Title = "List"; }>
+
+@Styles.Render("~/Content/css")
+<link href="@Url.Content("~/engine1/style.css")" rel="stylesheet" type="text/css" />
+
+
+<div id="productlist-content">
+
+    @Html.Action("CategoriesMenu")
+
+   
+    <div id="productlist-rightsection">
+        @Html.Partial("_Logo")
+        <div id="breadcrumb-section">
+  
+            <img src="@Url.Content("~/Content/Images/home-small.png")" />
+            @Html.MvcSiteMap().SiteMapPath()
+
+            @*#productlist-section okresla ktora
+                sekcja ma byc odswiezona po wyslaniu zadania get
+
+            *@
+            <br />
+            <form id="search-form" method="get" data-ajax="true" data-ajax-target="#productlist-section">
+                <input id="search-filter" type="search" name="searchQuery" data-autocomplete-source="@Url.Action("ProductsSuggestions")" placeholder="Wprowadź tekst, aby wyfiltrować..." />
+                <input type="submit" value="" />
+            </form>
+
+        </div>
+        <br />
+
+        @Html.Partial("ProductList")
+
+        <br />
+        Strona
+        @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) z
+        @Model.PageCount
+        @Html.PagedListPager(Model, page => Url.Action("List",
+        new
+        {
+            page,
+            sortOrder = ViewBag.CurrentSort,
+            currentFilter =
+                ViewBag.CurrentFilter
+        }))
+    </div>
+
+
+    <br/>
+
+</div>
+
+@section ScriptsBottom {
+
+    <script src="~/Scripts/jquery-1.11.4.js"></script>
+    <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+    <script>
+        $(function () {
+            //gdy wywolujemy submit do serwera
+            var ajaxSubmit = function () {
+
+                var $form = $(this);
+
+                var settings = {
+                    //zserializowane wszystkie elementy formularza
+                    //by fun ajax mogla z nich skorzysataca
+                    data: $(this).serialize(),
+                    //akcja przypisana do formularza
+                    url: $(this).attr("action"),
+                    //typ zadania pobrana z metod get
+                    type: $(this).attr("method")
+                };
+                //result kawalek zrworconego html z zadania
+                $.ajax(settings).done(function (result) {
+                    //pozwala w sposob asynchroniczny wyslac zadanie do serwera
+                    //po .done jest opisane co musimy zrobic po wyslaniu żadania
+                    //gdy otrzymalismy odpowiedz
+                    var $targetElement = $($form.data("ajax-target"));
+                    var $newContent = $(result);
+                    //zastepowaie tego co bylo wczesniej tym co przyszlo z żądania
+                    $($targetElement).replaceWith($newContent);
+                    $newContent.effect("slide");
+                });
+
+                return false;
+            };
+
+
+            var setupAutoComplete = function () {
+                var $input = $(this);
+
+                var options = {
+                    //source inform o zrodle podpowiedzi json
+                    source: $input.attr("data-autocomplete-source"),
+                    //funkcja dzialajaca po nacisnieciu enter w podpowiedzi
+                    select: function (event, ui) {
+                        $input = $(this);
+                        $input.val(ui.item.label);
+                        var $form = $input.parents("form:first");
+                        $form.submit();
+                    }
+                };
+                //jqui wymaga options
+                $input.autocomplete(options);
+            };
+            //jak ktos zasubmituje formularz wyszukiwania
+            //to nie przeladowywuj strony tylko wywolaj funkcje ajaxSubmit
+            $("#search-form").submit(ajaxSubmit);
+            //szuka forma na tej stronie
+            $("#search-filter").each(setupAutoComplete);
+
+        });
+
+    </script>
+}
+<script type="text/javascript" src="engine1/wowslider.js"></script>
+<script type="text/javascript" src="~/Content/bootstrap.css"></script>
+<script type="text/javascript" src="~/Content/bootstrap.min.css"></script>
+
+<script type="text/javascript" src="engine1/jquery.js"></script>
+<script type="text/javascript" src="engine1/wowslider.mod.js"></script>
+<script type="text/javascript" src="engine1/script.js"></script>
+@System.Web.Optimization.Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")

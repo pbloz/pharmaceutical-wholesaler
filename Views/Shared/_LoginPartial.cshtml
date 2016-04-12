@@ -1,0 +1,40 @@
+﻿@using Microsoft.AspNet.Identity
+
+<div id="login-header">
+    @*sprawdzenie czy user jest zalogowany czy nie*@
+    @if (Request.IsAuthenticated)
+    {
+        using (Html.BeginForm("Logoff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+        {
+            @Html.AntiForgeryToken()
+
+
+            <div>
+                @*do wyswietlania emaila aktualnie zalogowanego usera*@
+                @Html.ActionLink(User.Identity.GetUserName(), "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+
+            </div>
+            <div>
+                <a href="javascript:document.getElementById('logoutForm').submit()">Wyloguj</a>
+            </div>
+            <div>
+                <a href="@Url.Action("StaticContent", "Home", new { viewname = "Onas" })">O nas</a>
+
+            </div>
+        }
+    }
+    else
+    {
+        <div>
+            @Html.ActionLink("Rejestracja", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })
+        </div>
+        <div>
+            @Html.ActionLink("Zaloguj", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })
+        </div>
+
+        <div>
+            <a href="@Url.Action("StaticContent", "Home", new { viewname = "Onas" })">O nas</a>
+
+        </div>
+    }
+</div>

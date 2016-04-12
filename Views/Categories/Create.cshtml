@@ -1,0 +1,67 @@
+﻿@model Hurtownia.Models.Category
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/ManageLayout.cshtml";
+}
+<hr />
+
+<h2>Formularz dodawania nowej kategorii</h2>
+
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+
+ 
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.NameCategory, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.NameCategory, new { htmlAttributes = new { @class = "form-control col-md-2" } })
+                @Html.ValidationMessageFor(model => model.NameCategory, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <hr />
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control col-md-2" } })
+                @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <hr />
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.IconFilename, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.IconFilename, new { htmlAttributes = new { @class = "form-control col-md-2" } })
+                @Html.ValidationMessageFor(model => model.IconFilename, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    <hr />
+    <hr />
+        <hr />
+
+    <br />
+    <br/>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Dodaj" class="btn btn-info" />
+            </div>
+        </div>
+
+}
+
+<div>
+    @Html.ActionLink("Wstecz", "Index")
+</div>
+
+@section ScriptsBottom{
+    @System.Web.Optimization.Scripts.Render("~/bundles/jquery")
+    
+}

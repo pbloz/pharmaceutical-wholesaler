@@ -1,0 +1,87 @@
+﻿@model IEnumerable<Hurtownia.Models.Product>
+@using Hurtownia.Infrastructure
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/ManageLayout.cshtml";
+
+}
+
+@*<h2>Index</h2>*@
+<br /><br />
+<p>
+    @*@Html.ActionLink("Create New", "Create")*@
+    @Html.ActionLink("Dodaj Produkt", "AddProduct", "Manage", new { @class = "btn btn-info" })
+
+
+</p><br />
+<table class="table">
+
+    <tr >
+        <th colspan="6">
+            Zdjęcie
+        </th>
+
+        <th>
+            Nazwa
+        </th>
+
+
+
+        <th>Data ważności</th>
+        <th>Cena [PLN]</th>
+        <th>Dostępna ilość</th>
+        <th>Akcja</th>
+
+
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td colspan="6">
+                <section>
+                    <ul class="ThreeColumnsStaticCoversList large-cover-list-bottom">
+
+                        <li>
+                            <article>
+                                <a class="productdetailslink" href="">
+                                    <img class="album-cover" src="@Url.ProductCoverPath(item.CoverFileName)" />
+                                </a>
+                            </article>
+                        </li>
+
+
+                    </ul>
+
+                </section>
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductName)
+            </td>
+
+            <td>
+                @String.Format("{0:dd/MM/yyyy}", item.DateEnd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductPrice) 
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.MaxQuantity)
+            </td>
+
+
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ProductId }) |
+                <a href="@Url.Action("Details", "Store", new { id = item.ProductId })">Details</a> |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ProductId })
+            </td>
+        </tr>
+    }
+
+</table>
+<script type="text/javascript" src="engine1/wowslider.js"></script>
+<script type="text/javascript" src="engine1/jquery.js"></script>
+<script type="text/javascript" src="engine1/wowslider.mod.js"></script>
+<script type="text/javascript" src="engine1/script.js"></script>
+@System.Web.Optimization.Scripts.Render("~/bundles/jquery")

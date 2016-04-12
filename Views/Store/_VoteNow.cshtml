@@ -1,0 +1,57 @@
+﻿@model string
+@{
+    var url = Request.Url.AbsolutePath;
+}
+@if (!User.Identity.IsAuthenticated)
+{
+    <text><a href="http://localhost:58041/Account/LogOn?Length=4" title="Login to rate">Zaloguj się</a>, aby ocenić</text>
+    return;
+}
+@if (Request.Cookies[url] == null)
+{
+    <div id="ratingDiv" class="smallText">
+        Słabo
+        <img src="/Images/whitestar.gif" alt="" class="ratingStar" data-value="1" /><img src="/Images/whitestar.gif" alt="" class="ratingStar" data-value="2" /><img src="/Images/whitestar.gif" alt="" class="ratingStar" data-value="3" /><img src="/Images/whitestar.gif" alt="" class="ratingStar" data-value="4" /><img src="/Images/whitestar.gif" alt="" class="ratingStar" data-value="5" /> Super
+        <label id="lblResult"></label>
+    </div>
+    <style type="text/css">
+        .ratingStar {
+            cursor: pointer;
+        }
+    </style>
+    <script type="text/javascript">
+        var clickedFlag = false;
+        $(".ratingStar").mouseover(function () {
+            $(this).attr("src", "/Images/yellowstar.gif").prevAll("img.ratingStar").attr("src", "/Images/yellowstar.gif");
+        });
+        $(".ratingStar, #radingDiv").mouseout(function () {
+            $(this).attr("src", "/Images/whitestar.gif");
+        });
+        $("#ratingDiv").mouseout(function () {
+            if (!clickedFlag) {
+                $(".ratingStar").attr("src", "/Images/whitestar.gif");
+            }
+        });
+        $(".ratingStar").click(function () {
+            clickedFlag = true;
+            $(".ratingStar").unbind("mouseout mouseover click").css("cursor", "default");
+
+            var url = "/Item/SendRating?r=" + $(this).attr("data-value") + "&s=5&id=@Model&url=@url";
+            $.post(url, null, function (data) {
+                $("#lblResult").html(data);
+            });
+        });
+        $("#lblResult").ajaxStart(function () {
+            $("#lblResult").html("Processing ....");
+        });
+        $("#lblResult").ajaxError(function () {
+            $("#lblResult").html("<br />Error occured.");
+        });
+    </script>
+}
+else
+{
+    <text><span style="color:green;">Dziękuje za głos !</span></text>
+}
+
+

@@ -1,0 +1,144 @@
+﻿@model Hurtownia.ViewModels.HomeViewModel
+@using Hurtownia.Infrastructure
+@{
+    ViewBag.Title = "Strona główna";
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/RightSectionLayout.cshtml";
+}
+
+
+
+
+
+
+@Styles.Render("~/Content/css")
+<link href="@Url.Content("~/engine1/style.css")" rel="stylesheet" type="text/css" />
+
+
+@*<ul class="bxslider">
+    @foreach (var item in Model.Slider)
+    {
+        <li><img src="@Url.Content("~/Content/Covers/" + item.Product.CoverFileName)" /></li>
+        
+    }
+
+</ul>*@
+
+<body>
+    <div id="wowslider-container1">
+        <div class="ws_images">
+            <ul>
+                <li><a href="https://localhost:44300/product-3.html"><img src="/data1/images/latibioc.jpg" alt="latibioc" title="latibioc" id="wows1_0" /></a></li>
+                <li><a href="https://localhost:44300/product-4.html"><img src="/data1/images/magnesive.jpg" alt="magnesive" title="magnesive" id="wows1_1" /></a></li>
+                <li><a href="https://localhost:44300/product-18.html"><img src="/data1/images/nut.jpg" alt="nut" title="nutribioc" id="wows1_2" /></a></li>
+                <li><a href="https://localhost:44300/product-34.html"><img src="/data1/images/para.jpg" alt="para" title="paracetamol" id="wows1_3" /></a></li>
+                <li><a href="https://localhost:44300/product-19.html"><img src="/data1/images/ubi.jpg" alt="ubichinol" title="ubi" id="wows1_4" /></a></li>
+                <li><a href="https://localhost:44300/product-6.html"><img src="/data1/images/zuramix.jpg" alt="zuramix" title="zuramix" id="wows1_5" /></a></li>
+                </ul>
+        </div>
+        <div class="ws_bullets">
+
+        </div>
+        <div class="ws_shadow"></div>
+    </div>
+    <script type="text/javascript" src="engine1/wowslider.js"></script>
+    <script type="text/javascript" src="engine1/script.js"></script>
+</body>
+<br/>
+@Html.Partial("_Logo")
+<br />
+@using (Html.BeginForm("ShowAllProducts", "Products", FormMethod.Get))
+{
+
+    @*@Html.RadioButton("searchBy", "productName") <text>Nazwie produktu</text><br />*@
+    @Html.TextBox("search")<label>   </label><input type="submit" value="Wyszukaj" class="btn btn-info btn-sm" /><br /><br />
+    <b>Wyszukaj w : </b>       <label class="radio-inline">
+        @Html.RadioButton("searchBy", "name", true)
+    </label><text>Nazwie</text>
+    <label class="radio-inline">
+        @Html.RadioButton("searchBy", "category")
+    </label> <text>Kategorii</text>
+    <label class="radio-inline">
+        @Html.RadioButton("searchBy", "manufacture")
+    </label><text>Producencie</text>
+    <label class="radio-inline">
+        @Html.RadioButton("searchBy", "description")
+    </label><text>Opisie</text>
+    <br />
+    <br />
+}
+<br />
+<br />
+<div id="productlist-section">
+    <div class="div-opacity">
+    <section>
+        <ul class="ThreeColumnsCoversList small-cover-list" style="width:980px">
+            @foreach (var newArrival in Model.NewArrivals)
+            {
+                <li>
+                    <article>
+                        <a class="addtocartlink" href="@Url.Action("AddToCart", "Cart", new { id = newArrival.ProductId })">
+                            <img src="../Content/Images/cart.png" />
+                        </a>
+                        <a class="productdetailslink" href="@Url.Action("Details", "Store", new { id = newArrival.ProductId })">
+                            <div class="newFlag"></div>
+                            <img class="album-cover" src="@Url.Content("~/Content/Covers/" + newArrival.CoverFileName)" />
+                            <h1>
+                                @newArrival.ProductName <br /> @newArrival.ProductPrice PLN
+                            </h1>
+                        </a>
+                    </article>
+                </li>
+            }
+        </ul>
+
+    </section>
+    <br />
+    <br />
+    <section>
+        <ul class="ThreeColumnsCoversList small-cover-list" style="width:980px">
+
+            @foreach (var bestseller in Model.Bestsellers)
+            {
+                <li>
+                    <article>
+                        <a class="addtocartlink" href="@Url.Action("AddToCart", "Cart", new { id = bestseller.ProductId })">
+                            <img src="../Content/Images/cart.png" />
+                        </a>
+                        <a class="productdetailslink" href="@Url.Action("Details", "Store", new { id = bestseller.ProductId })">
+                            <div class="bestsellerFlag"></div>
+                            <img class="album-cover" src="@Url.ProductCoverPath(bestseller.CoverFileName)" />
+                            <h1>
+                                @bestseller.ProductName <br /> @bestseller.ProductPrice PLN
+                            </h1>
+                        </a>
+                    </article>
+                </li>
+            }
+
+        </ul>
+    </section>
+    </div>
+    </div>
+    <br />
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<link href="/lib/jquery.bxslider.css" rel="stylesheet" />
+<script src="/js/jquery.bxslider.min.js"></script>
+<script type="text/javascript">
+    $('.bxslider').bxSlider({
+        mode: 'fade',
+        captions: true
+    });
+</script>
+
+
+    <script type="text/javascript" src="engine1/wowslider.js"></script>
+    <script type="text/javascript" src="~/Content/bootstrap.css"></script>
+    <script type="text/javascript" src="~/Content/bootstrap.min.css"></script>
+
+    <script type="text/javascript" src="engine1/jquery.js"></script>
+    <script type="text/javascript" src="engine1/wowslider.mod.js"></script>
+    <script type="text/javascript" src="engine1/script.js"></script>
+    @System.Web.Optimization.Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")

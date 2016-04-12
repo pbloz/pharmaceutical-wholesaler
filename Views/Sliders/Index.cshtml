@@ -1,0 +1,80 @@
+﻿@model IEnumerable<Hurtownia.Models.Slider>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/ManageLayout.cshtml";
+}
+<br />
+<br />
+
+<p>
+    @Html.ActionLink("Dodaj do Slidera", "Create")
+</p>
+
+@*@using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            <h4>Slider</h4>
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                @Html.LabelFor(Model., "ProductId", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownList("ProductId", null, htmlAttributes: new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.ProductId, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    }*@
+<br />
+<br />
+
+<table class="table">
+
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td colspan="6">
+                <section>
+                    <ul class="ThreeColumnsStaticCoversList small-cover-list">
+
+                        <li>
+                            <article>
+                                <a class="productdetailslink" href="@Url.Action("Details", "Store", new { id = item.ProductId })">
+                                    <img class="album-cover" src="@Url.ProductCoverPath(item.Product.CoverFileName)" />
+                                </a>
+                                <div>
+                                    @Html.DisplayFor(modelItem => item.Product.ProductName)
+                                </div>
+                            </article>
+                        </li>
+
+
+                    </ul>
+
+                </section>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Product.ProductName)
+            </td>
+
+            <td>
+                @*@Html.ActionLink("Szczegóły", "Store", "Details", new { id = item.ProductId }) |*@
+             @*   <a href="@Url.Action("Details", "Store", new { id = item.ProductId })">Szczegóły</a> |*@
+
+                @Html.ActionLink("Usuń", "Delete", new { id = item.SliderId })
+            </td>
+
+        </tr>
+    }
+
+</table>

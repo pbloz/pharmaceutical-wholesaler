@@ -1,0 +1,68 @@
+﻿@model IEnumerable<Hurtownia.Models.Product>
+@using Hurtownia.Infrastructure
+
+@Styles.Render("~/Content/css")
+<link href="@Url.Content("~/engine1/style.css")" rel="stylesheet" type="text/css" />
+<br />
+    @*Sortuj według:*@
+<div id="productlist-section">
+
+
+    @Html.ActionLink("Nazwa", "List", new
+                    {
+                        sortOrder = ViewBag.NameSortParm
+                    })
+
+    @Html.ActionLink("Opis", "List", new
+               {
+                   sortOrder =
+                    ViewBag.DateSortParm
+               })
+
+    <br />
+    <br />
+    <section>
+        <ul class="ThreeColumnsCoversList small-cover-list">
+
+            @foreach (var product in Model)
+            {
+                <li>
+                    <article>
+                        <a class="addtocartlink" href="@Url.Action("AddToCart", "Cart", new { id = product.ProductId })">
+                            <img class="album-cover" src="@Url.Content("~/Content/Images/cart.png")" alt="Dodaj do koszyka" />
+                        </a>
+                        @if (product.IsBestseller)
+                        {
+                            <div class="bestsellerFlag"></div>
+                        }
+                        <a class="productdetailslink" href="@Url.Action("Details", "Store", new { id = product.ProductId })">
+                            <img class="album-cover" src="@Url.Content("~/Content/Covers/" + product.CoverFileName)" />
+                            <h1>
+                                @product.ProductName - @product.ProductPrice PLN
+                                <br />
+                               
+                            </h1>
+
+                        </a>
+
+                    </article>
+                </li>
+            }
+
+
+
+        </ul>
+    </section>
+    @*<input type="submit" value="Porównaj" class="btn btn-default" />*@
+    <br />
+
+</div>
+<script type="text/javascript" src="engine1/wowslider.js"></script>
+<script type="text/javascript" src="~/Content/bootstrap.css"></script>
+<script type="text/javascript" src="~/Content/bootstrap.min.css"></script>
+
+<script type="text/javascript" src="engine1/jquery.js"></script>
+<script type="text/javascript" src="engine1/wowslider.mod.js"></script>
+<script type="text/javascript" src="engine1/script.js"></script>
+@System.Web.Optimization.Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")

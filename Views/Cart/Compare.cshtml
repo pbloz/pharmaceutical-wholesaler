@@ -1,0 +1,95 @@
+﻿@model Hurtownia.ViewModels.CompareViewModel
+@using Hurtownia.Infrastructure
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="productlist-content">
+    @Html.Action("CategoriesMenu", "Store")
+    <div id="productlist-rightsection">
+
+
+        <section class="content-section">
+            <div class="section-header" style="margin-bottom: 0px;">
+                <h1>Porównywarka</h1>
+            </div>
+
+            <br />
+            <table id="cart-table">
+
+                @foreach (var cartItem in Model.CompareItems)
+                {
+                    //do powiazania, szybkiego usuwania z koszyka po unikalnym id
+                    <tr id="cart-row-@cartItem.Product.ProductId">
+                        <td>
+                            <a href="@Url.Action("Details", "Store", new { id = cartItem.Product.ProductId })">
+                                <img src="@Url.Content("~/Content/Covers/" + cartItem.Product.CoverFileName)" />
+                            </a>
+                        </td>
+                        <td><a href="@Url.Action("Details", "Store", new { id = cartItem.Product.ProductId })">@cartItem.Product.ProductName</a></td>
+                        <td><a href="@Url.Action("Details", "Store", new { id = cartItem.Product.ProductId })">@cartItem.Product.ProductDescription</a></td>
+                        <td><a href="@Url.Action("Details", "Store", new { id = cartItem.Product.ProductId })">@cartItem.Product.ProductPrice</a></td>
+
+
+                        @*data id z html5 do szybkiego usuwania *@
+                        <td><a class="btn btn-info" id="removeProduct" style="margin-top: 20px; font-weight: bold; display: block;" data-id="@cartItem.Product.ProductId" href="@Url.Action("RemoveFromCompare", "Cart", new { productId = @cartItem.Product.ProductId })">Usuń</a></td>
+                    </tr>
+                }
+                
+            </table>
+
+        
+
+         
+
+        </section>
+
+    </div>
+</div>
+
+@section ScriptsBottom{
+    @System.Web.Optimization.Scripts.Render("~/bundles/jquery")
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script type="text/javascript">
+
+        $(function () {
+            $("#removeProduct").click(function () {
+            //pobieramy id produktu do usuniecia
+                var recordToDelete = $(this).attr("data-id");
+
+                if (recordToDelete != '') {
+
+                    // Send post request with AJAX
+                    $.post("/Cart/RemoveFromCompare", { "productId": recordToDelete },
+                        function (response) {
+                            // Success
+                            if (response.RemovedItemCount == 0) {
+
+                                $('#cart-row-' + response.RemoveItemId).fadeOut('slow', function () {
+                                    if (response.CartItemsCount == 0) {
+                                        $("#cart-empty-message").removeClass("hidden");
+                                    }
+                                });
+                            } else {
+                                $('#cart-item-count-' + response.RemoveItemId).text(response.RemovedItemCount);
+                            }
+                            //jesli w koszyku jest 0 elementow
+                            if (response.CartItemsCount == 0) {
+                                $('#cart-button-checkout').addClass('hidden');
+                                $('#total-price').addClass('invisible');
+                            }
+
+                            $('#total-price-value').text(response.CartTotal);
+                            $('#cart-header-items-count').text(response.CartItemsCount);
+
+                        });
+
+                    return false;
+                }
+            });
+
+        });
+
+    </script>
+}

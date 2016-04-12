@@ -1,0 +1,55 @@
+﻿@model IEnumerable<Hurtownia.Models.Product>
+
+@{
+    ViewBag.Title = "Produkty, które mają najdłuższą datę ważności";
+    Layout = "~/Views/Shared/ManageLayout.cshtml";
+}
+<br />
+<br />
+<h2><b style="color:red;font-size:18px;">Lista 10 produktów, które mają najdłuższą datę ważności</b></h2>
+<br />
+
+
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-striped-column">
+        <tr style="padding:5px" class="td info">
+
+            <th style="padding:10px">
+                Nazwa
+            </th>
+
+            <th style="padding:10px">
+                Cena [PLN]
+            </th>
+            <th style="padding:10px">
+                Data ważności
+            </th>
+            <th style="padding:10px">
+                Dostępna ilość
+            </th>
+
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr style="padding:5px" class="td info">
+
+                <td style="padding:10px">
+                    @Html.DisplayFor(modelItem => item.ProductName)
+
+                </td>
+                <td style="padding:10px">
+                    @Html.DisplayFor(modelItem => item.ProductPrice)
+                </td>
+                <td style="padding:10px">
+                    @String.Format("{0:dd/MM/yyyy}", item.DateEnd)
+                </td>
+                <td style="padding:10px">
+                    @Html.DisplayFor(modelItem => item.MaxQuantity)
+                </td>
+
+            </tr>
+        }
+    </table>
+</div>
+

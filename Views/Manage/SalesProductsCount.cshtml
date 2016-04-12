@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Hurtownia.Models.Order>
+
+@{
+    ViewBag.Title = "Najwyższe zakupy";
+    Layout = "~/Views/Shared/ManageLayout.cshtml";
+    
+}
+<br />
+<br/>
+<h1><b style="color:red;font-size:18px;">Klienci, którzy wydali jednorazowo na zakupach najwięcej</b></h1><br/>
+
+<table class="table table-bordered table-striped table-striped-column">
+
+    <tr>
+        <th style="padding:5px">
+            Imię
+        </th>
+
+        <th style="padding:5px">
+            Nazwisko
+        </th>
+        <th style="padding:5px">
+            Suma [zł]
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td style="padding:5px">
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td style="padding:5px">
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td style="padding:5px">
+                @Html.DisplayFor(modelItem => item.TotalPrice)
+            </td>
+        </tr>
+    }
+</table>
+<br />

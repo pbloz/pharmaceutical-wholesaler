@@ -1,0 +1,59 @@
+﻿@model Hurtownia.Models.Manufacture
+
+@{
+    ViewBag.Title = "Szczegóły producenta";
+    Layout = "~/Views/Shared/ManageLayout.cshtml";
+}
+
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CodeAndCity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodeAndCity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nip)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nip)
+        </dd>
+
+    </dl>
+</div>
+<br />
+<br/>
+<p>
+    @Html.ActionLink("Edytuj", "Edit", new { id = Model.ManufactureId }) |
+    @Html.ActionLink("Wstecz", "Index")
+</p>

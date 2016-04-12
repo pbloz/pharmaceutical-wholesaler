@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Hurtownia.Models.Product>
+
+@{
+    ViewBag.Title = "ProductsWithDateEnd";
+    Layout = "~/Views/Shared/ManageLayout.cshtml";
+}
+<br/>
+<br/>
+<h2>Produkty, których termin ważności upływa wcześniej niż za 90 dni</h2>
+
+<br/>
+<table>
+    <tr>
+        <th style="padding:5px">
+            Nazwa
+        </th>
+
+        <th style="padding:5px">
+            Cena
+        </th>
+        <th style="padding:5px">
+            Data ważności
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td style="padding:5px">
+                @Html.DisplayFor(modelItem => item.ProductName)
+            </td>
+            <td style="padding:5px">
+                @Html.DisplayFor(modelItem => item.ProductPrice)
+            </td>
+            <td style="padding:5px">
+                @Html.DisplayFor(modelItem => item.DateEnd)
+            </td>
+        </tr>
+    }
+</table>
+<br />

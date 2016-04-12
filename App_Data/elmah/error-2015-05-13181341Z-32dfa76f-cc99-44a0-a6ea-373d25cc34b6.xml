@@ -1,0 +1,186 @@
+﻿<error errorId="32dfa76f-cc99-44a0-a6ea-373d25cc34b6" application="/LM/W3SVC/5/ROOT" host="LENOVO-PC" type="System.Web.HttpException" message="A public action method 'engine1' was not found on controller 'Hurtownia.Controllers.HomeController'." source="System.Web.Mvc" detail="System.Web.HttpException (0x80004005): A public action method 'engine1' was not found on controller 'Hurtownia.Controllers.HomeController'.&#xD;&#xA;   w System.Web.Mvc.Controller.HandleUnknownAction(String actionName)&#xD;&#xA;   w System.Web.Mvc.Controller.&lt;BeginExecuteCore&gt;b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   w System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.Controller.&lt;BeginExecute&gt;b__15(IAsyncResult asyncResult, Controller controller)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   w System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.MvcHandler.&lt;BeginProcessRequest&gt;b__5(IAsyncResult asyncResult, ProcessRequestState innerState)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   w System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)&#xD;&#xA;   w System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()&#xD;&#xA;   w System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)" user="admin@hurtownia.pl" time="2015-05-13T18:13:41.2161657Z" statusCode="404">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_ACCEPT:*/*&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:pl,en-US;q=0.7,en;q=0.3&#xD;&#xA;HTTP_COOKIE:glimpsePolicy=On; glimpseOptions=%7B%22glimpsePolicy%22%3Anull%7D; ai_user=15C8CF29-40C5-4444-A523-CD3F4CBF2A95|2015-04-16T18:07:44.805Z; ai_session=985448BF-A4BA-4A05-9894-88B778D1A5E7|2015-04-16T18:07:44.810Z|2015-04-16T18:16:14.403Z; __RequestVerificationToken=zsJ7-eVG6fj6tdWf2BhOc6RREcO8x9VM0PcHQak9Q3dWrqgfO0r6BulxZ_I5l-nHyMjkzz61heHWKAC8eGm7I_1lbpUXvSL_H3D8olPR69o1; glimpseId=hurtexinz@gmail.com; .AspNet.Correlation.Google=utQv7wzvycbS_j4rzmviUsbGhViLbKVQRj2ixTNAPXQ; .AspNet.Correlation.Facebook=QDRYTG0Bnk-rjJVtdSypnRw37dzbsYUBbMpz-o-ECIQ; .AspNet.ApplicationCookie=MOFPkgs0i1fVCCOvceVBIYoepsfmc2KEoiTjzmzjiEtZyEyopfzIyN8PwkVD3bURhjkIIsaFG20fB8BbbmKsH-RkCsmZCEhGm57s02L7acQm2fUvx-EYIV_U10XiRN9oqAMUOlSGecz8MdPHhZ3n5N22VMTmZUsWpic8v9FOwUcKxIPr5m4T7dKGghJffMrMmYaUNtOEa73IcnCK9AP50uyYnl-89ZNVo3MgXWuC8RcpAAxhnGSqv4uF71sTvVJ0a4aGocD_9NNlO2pgC6mrGhJ2mZtBVCoQspMVz4lNJuuvzkXr40CSNgY4KiYwe5nm7aGu3aBG7ttGe00e3m0BmCEAxo2Wm3b7bVTYR5XPCTnjOs9rbLoaEBHr7etoA60phq4YFNRmwX2-n2hDJd3rP1CpkwVDTgVRX_6bms6geoHPp42G1TPhybK_IZR9AZwWReET_a4Yvm9bxv9cjxZqZQjxZShF3sO0aj4aHZ7Sa6P_XeNjbYUti0B25uU_Q4ABwIUerlWLOtMBt3ydoRXnQw&#xD;&#xA;HTTP_HOST:localhost:44300&#xD;&#xA;HTTP_REFERER:https://localhost:44300/Home/Index&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 6.3; WOW64; rv:37.0) Gecko/20100101 Firefox/37.0&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Connection: keep-alive&#xD;&#xA;Accept: */*&#xD;&#xA;Accept-Encoding: gzip, deflate&#xD;&#xA;Accept-Language: pl,en-US;q=0.7,en;q=0.3&#xD;&#xA;Cookie: glimpsePolicy=On; glimpseOptions=%7B%22glimpsePolicy%22%3Anull%7D; ai_user=15C8CF29-40C5-4444-A523-CD3F4CBF2A95|2015-04-16T18:07:44.805Z; ai_session=985448BF-A4BA-4A05-9894-88B778D1A5E7|2015-04-16T18:07:44.810Z|2015-04-16T18:16:14.403Z; __RequestVerificationToken=zsJ7-eVG6fj6tdWf2BhOc6RREcO8x9VM0PcHQak9Q3dWrqgfO0r6BulxZ_I5l-nHyMjkzz61heHWKAC8eGm7I_1lbpUXvSL_H3D8olPR69o1; glimpseId=hurtexinz@gmail.com; .AspNet.Correlation.Google=utQv7wzvycbS_j4rzmviUsbGhViLbKVQRj2ixTNAPXQ; .AspNet.Correlation.Facebook=QDRYTG0Bnk-rjJVtdSypnRw37dzbsYUBbMpz-o-ECIQ; .AspNet.ApplicationCookie=MOFPkgs0i1fVCCOvceVBIYoepsfmc2KEoiTjzmzjiEtZyEyopfzIyN8PwkVD3bURhjkIIsaFG20fB8BbbmKsH-RkCsmZCEhGm57s02L7acQm2fUvx-EYIV_U10XiRN9oqAMUOlSGecz8MdPHhZ3n5N22VMTmZUsWpic8v9FOwUcKxIPr5m4T7dKGghJffMrMmYaUNtOEa73IcnCK9AP50uyYnl-89ZNVo3MgXWuC8RcpAAxhnGSqv4uF71sTvVJ0a4aGocD_9NNlO2pgC6mrGhJ2mZtBVCoQspMVz4lNJuuvzkXr40CSNgY4KiYwe5nm7aGu3aBG7ttGe00e3m0BmCEAxo2Wm3b7bVTYR5XPCTnjOs9rbLoaEBHr7etoA60phq4YFNRmwX2-n2hDJd3rP1CpkwVDTgVRX_6bms6geoHPp42G1TPhybK_IZR9AZwWReET_a4Yvm9bxv9cjxZqZQjxZShF3sO0aj4aHZ7Sa6P_XeNjbYUti0B25uU_Q4ABwIUerlWLOtMBt3ydoRXnQw&#xD;&#xA;Host: localhost:44300&#xD;&#xA;Referer: https://localhost:44300/Home/Index&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64; rv:37.0) Gecko/20100101 Firefox/37.0&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/5/ROOT" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="C:\PZ\Inzynierka\v1.7\Hurtownia\Hurtownia\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="ApplicationCookie" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="admin@hurtownia.pl" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="*****" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="admin@hurtownia.pl" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="256" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="1024" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="CN=localhost" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="CN=localhost" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="0" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="on" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="256" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="1024" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="CN=localhost" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="CN=localhost" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="5" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/5" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/Home/engine1/jquery.js" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="C:\PZ\Inzynierka\v1.7\Hurtownia\Hurtownia\Home\engine1\jquery.js" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="19227" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="GET" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/Home/engine1/jquery.js" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="44300" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="1" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/8.0" />
+    </item>
+    <item name="URL">
+      <value string="/Home/engine1/jquery.js" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="*/*" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="pl,en-US;q=0.7,en;q=0.3" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="glimpsePolicy=On; glimpseOptions=%7B%22glimpsePolicy%22%3Anull%7D; ai_user=15C8CF29-40C5-4444-A523-CD3F4CBF2A95|2015-04-16T18:07:44.805Z; ai_session=985448BF-A4BA-4A05-9894-88B778D1A5E7|2015-04-16T18:07:44.810Z|2015-04-16T18:16:14.403Z; __RequestVerificationToken=zsJ7-eVG6fj6tdWf2BhOc6RREcO8x9VM0PcHQak9Q3dWrqgfO0r6BulxZ_I5l-nHyMjkzz61heHWKAC8eGm7I_1lbpUXvSL_H3D8olPR69o1; glimpseId=hurtexinz@gmail.com; .AspNet.Correlation.Google=utQv7wzvycbS_j4rzmviUsbGhViLbKVQRj2ixTNAPXQ; .AspNet.Correlation.Facebook=QDRYTG0Bnk-rjJVtdSypnRw37dzbsYUBbMpz-o-ECIQ; .AspNet.ApplicationCookie=MOFPkgs0i1fVCCOvceVBIYoepsfmc2KEoiTjzmzjiEtZyEyopfzIyN8PwkVD3bURhjkIIsaFG20fB8BbbmKsH-RkCsmZCEhGm57s02L7acQm2fUvx-EYIV_U10XiRN9oqAMUOlSGecz8MdPHhZ3n5N22VMTmZUsWpic8v9FOwUcKxIPr5m4T7dKGghJffMrMmYaUNtOEa73IcnCK9AP50uyYnl-89ZNVo3MgXWuC8RcpAAxhnGSqv4uF71sTvVJ0a4aGocD_9NNlO2pgC6mrGhJ2mZtBVCoQspMVz4lNJuuvzkXr40CSNgY4KiYwe5nm7aGu3aBG7ttGe00e3m0BmCEAxo2Wm3b7bVTYR5XPCTnjOs9rbLoaEBHr7etoA60phq4YFNRmwX2-n2hDJd3rP1CpkwVDTgVRX_6bms6geoHPp42G1TPhybK_IZR9AZwWReET_a4Yvm9bxv9cjxZqZQjxZShF3sO0aj4aHZ7Sa6P_XeNjbYUti0B25uU_Q4ABwIUerlWLOtMBt3ydoRXnQw" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:44300" />
+    </item>
+    <item name="HTTP_REFERER">
+      <value string="https://localhost:44300/Home/Index" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 6.3; WOW64; rv:37.0) Gecko/20100101 Firefox/37.0" />
+    </item>
+  </serverVariables>
+  <cookies>
+    <item name="glimpsePolicy">
+      <value string="On" />
+    </item>
+    <item name="glimpseOptions">
+      <value string="%7B%22glimpsePolicy%22%3Anull%7D" />
+    </item>
+    <item name="ai_user">
+      <value string="15C8CF29-40C5-4444-A523-CD3F4CBF2A95|2015-04-16T18:07:44.805Z" />
+    </item>
+    <item name="ai_session">
+      <value string="985448BF-A4BA-4A05-9894-88B778D1A5E7|2015-04-16T18:07:44.810Z|2015-04-16T18:16:14.403Z" />
+    </item>
+    <item name="__RequestVerificationToken">
+      <value string="zsJ7-eVG6fj6tdWf2BhOc6RREcO8x9VM0PcHQak9Q3dWrqgfO0r6BulxZ_I5l-nHyMjkzz61heHWKAC8eGm7I_1lbpUXvSL_H3D8olPR69o1" />
+    </item>
+    <item name="glimpseId">
+      <value string="hurtexinz@gmail.com" />
+    </item>
+    <item name=".AspNet.Correlation.Google">
+      <value string="utQv7wzvycbS_j4rzmviUsbGhViLbKVQRj2ixTNAPXQ" />
+    </item>
+    <item name=".AspNet.Correlation.Facebook">
+      <value string="QDRYTG0Bnk-rjJVtdSypnRw37dzbsYUBbMpz-o-ECIQ" />
+    </item>
+    <item name=".AspNet.ApplicationCookie">
+      <value string="MOFPkgs0i1fVCCOvceVBIYoepsfmc2KEoiTjzmzjiEtZyEyopfzIyN8PwkVD3bURhjkIIsaFG20fB8BbbmKsH-RkCsmZCEhGm57s02L7acQm2fUvx-EYIV_U10XiRN9oqAMUOlSGecz8MdPHhZ3n5N22VMTmZUsWpic8v9FOwUcKxIPr5m4T7dKGghJffMrMmYaUNtOEa73IcnCK9AP50uyYnl-89ZNVo3MgXWuC8RcpAAxhnGSqv4uF71sTvVJ0a4aGocD_9NNlO2pgC6mrGhJ2mZtBVCoQspMVz4lNJuuvzkXr40CSNgY4KiYwe5nm7aGu3aBG7ttGe00e3m0BmCEAxo2Wm3b7bVTYR5XPCTnjOs9rbLoaEBHr7etoA60phq4YFNRmwX2-n2hDJd3rP1CpkwVDTgVRX_6bms6geoHPp42G1TPhybK_IZR9AZwWReET_a4Yvm9bxv9cjxZqZQjxZShF3sO0aj4aHZ7Sa6P_XeNjbYUti0B25uU_Q4ABwIUerlWLOtMBt3ydoRXnQw" />
+    </item>
+  </cookies>
+</error>

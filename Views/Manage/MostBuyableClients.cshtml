@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Hurtownia.ViewModels.CategoryStatistics>
+@{
+    ViewBag.Title = "MostBuyableClients";
+    Layout = "~/Views/Shared/ManageLayout.cshtml";
+}
+<div id="wrapper">
+    <br />
+    <br />
+
+    <h2><b style="color:red;font-size:18px;">Klienci, którzy robili zakupy najczęściej</b></h2>
+    <br />
+
+
+    <table class="table table-bordered table-striped table-striped-column">
+
+        <tr>
+            <th style="padding:5px">
+                Klient
+            </th>
+
+            <th style="padding:5px">
+                Ilość
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td style="padding:5px">
+                    @Html.DisplayFor(modelItem => item.CategoryName)
+                </td>
+                <td style="padding:5px">
+                    @Html.DisplayFor(modelItem => item.Categorys)
+                </td>
+            </tr>
+        }
+    </table>
+    <br />
+</div>

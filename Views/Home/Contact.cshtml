@@ -1,0 +1,44 @@
+﻿@{
+    ViewBag.Title = "Kontakt";
+    
+}
+
+
+
+
+<h2>Skontaktuj się z nami :</h2>
+
+<div style="margin-top: 20px; line-height: 22px;">
+  
+
+
+        @using (Html.BeginForm("Contact", "Home", null))
+        {
+            <fieldset>
+
+
+                    @Html.Label("Autor")
+                    @Html.TextBox("Autor", null, new { Class = "form-control", Styles = "height:40px;" })
+
+                    @Html.Label("Email")
+                    @Html.TextBox("Email", null, new { Class = "form-control", Styles = "height:40px;" })
+
+
+
+                    @Html.Label("Temat")
+                    @Html.TextBox("Topic", null, new { Class = "form-control", Styles = "height:40px;" })
+
+
+
+                    @Html.Label("Wpisz wiadomosc:")
+                    @Html.TextArea("Text", null, new { Class = "form-control", Styles = "cols:20;rows:10;" })
+
+
+
+                <p>
+                    <input type="submit" value="Wyślij" style="margin-top: 20px; font-weight: bold; display: block;" />
+                </p>
+            </fieldset>
+        }
+    
+</div>

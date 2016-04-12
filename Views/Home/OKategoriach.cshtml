@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Hurtownia.ViewModels.CategoryStatistics>
+
+@{
+    ViewBag.Title = "Statystyki";
+}
+
+
+<table>
+    <tr>
+        <th>
+            Id kategorii
+        </th>
+        <th>
+            Ilosc Produktow w kategorii
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                
+                @Html.DisplayFor(modelItem => item.CategoryName)
+                
+            </td>
+            <td>
+                @item.Categorys
+            </td>
+        </tr>
+    }
+</table>
+<br/>
+@*<a href="GeneratePDF"> Generuj PDF</a>*@

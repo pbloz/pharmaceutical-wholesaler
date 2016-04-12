@@ -1,0 +1,145 @@
+﻿@model Hurtownia.ViewModels.Statistics
+@{
+    ViewBag.Title = "Produkty z kończącą datą datą ważności";
+    Layout = "~/Views/Shared/ManageLayout.cshtml";
+}
+
+
+@*@Html.Partial("ProductsWithDateEndUnder60")*@
+
+<br />
+<br />
+<br />
+
+<h2> <b style="color:red;font-size:18px;">Produkty, których data ważności kończy się wcześniej niż za 120 dni, ale później niż za 90 dni</b></h2>
+<br />
+
+<div class="table-responsive">
+<table class="table table-bordered table-striped table-striped-column">
+
+   
+    <tr style="padding:5px" class="td info">
+
+        <th style="padding:5px">
+            Nazwa
+        </th>
+        <th style="padding:5px">
+            cena
+        </th>
+        <th style="padding:5px">
+            Data ważności
+        </th>
+    </tr>
+
+            @foreach (var item in Model.DateEnd120)
+            {
+                <tr>
+
+                    <td style="padding:5px" class="td info">
+
+                        @Html.DisplayFor(modelItem => item.ProductName)
+                    </td>
+                    <td style="padding:5px" class="td info">
+
+                        @Html.DisplayFor(modelItem => item.ProductPrice)
+                    </td>
+
+                    <td style="padding:5px" class="td info">
+
+                        @*@Html.DisplayFor(modelItem => item.DateEnd)*@
+                        @* @Html.DisplayFor(String.Format("{0:dd/MM/yyyy}",modelItem => item.DateEnd))*@
+                        @String.Format("{0:dd/MM/yyyy}", item.DateEnd)
+                    </td>
+                </tr>
+            }
+
+        </table>
+</div>
+<br />
+<br />
+
+<h2> <b style="color:red;font-size:18px;">Produkty, których data ważności kończy się wcześniej niż za 90 dni, ale później niż za 60 dni</b></h2>
+<br />
+
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-striped-column">
+
+        <tr>
+            <th style="padding:5px" class="td info">
+
+                Nazwa
+            </th>
+            <th style="padding:5px" class="td info">
+                cena
+            </th>
+            <th style="padding:5px" class="td info">
+                Data ważności
+            </th>
+        </tr>
+
+        @foreach (var item in Model.DateEnd90)
+        {
+            <tr>
+
+                <td style="padding:5px" class="td info">
+                    @Html.DisplayFor(modelItem => item.ProductName)
+                </td>
+                <td style="padding:5px" class="td info">
+                    @Html.DisplayFor(modelItem => item.ProductPrice)
+                </td>
+
+                <td style="padding:5px" class="td info">
+                    @*@Html.DisplayFor(modelItem => item.DateEnd)*@
+                    @String.Format("{0:dd/MM/yyyy}", item.DateEnd)
+
+
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
+
+
+<br />
+<br />
+
+<h2> <b style="color:red;font-size:18px;">Produkty, których data ważności kończy się wcześniej niż za 60 dni</b></h2>
+<br />
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-striped-column">
+
+
+        <tr class="table tbody tr > td.info">
+
+            <th style="padding:5px" class="td info">
+                Nazwa
+            </th>
+            <th style="padding:5px" class="td info">
+                cena
+            </th>
+            <th style="padding:5px" class="td info">
+                Data ważności
+            </th>
+        </tr>
+
+        @foreach (var item in Model.DateEnd60)
+        {
+            <tr class="table tbody tr > td.info">
+
+                <td class="td info">
+                    @Html.DisplayFor(modelItem => item.ProductName)
+                </td>
+                <td class="td info">
+                    @Html.DisplayFor(modelItem => item.ProductPrice)
+                </td>
+
+                <td class="td info">
+                   
+                    @String.Format("{0:dd/MM/yyyy}", item.DateEnd)
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>

@@ -1,0 +1,20 @@
+﻿@model Hurtownia.ViewModels.OrderConfirmationEmail
+Content-Type: text/plain; charset=utf-8
+
+Dziękujemy!
+
+Złożyłeś zamówienie w sklepie apphurtex.pl. Postaramy się, aby zamówione produkty dotarły do Ciebie w ciągu 24 godzin.
+
+Prosimy o przelanie kwoty @Model.Cost zł, tytułem: "zamówienie nr @Model.OrderNumber" na nasze konto bankowe:
+
+AppFarm Sp. z o.o
+ul. 3 Maja 54
+08-108 Siedlce
+PKO BP 10 1001 1100 0011 1100 0011
+
+Zaraz po zaksięgowaniu wpłaty nadamy przesyłkę kurierską pod wskazany przez Pana/ią adres: @Model.FullAddress.
+
+Tutaj znajdziesz szczegóły Twojego zamówienia: @Url.Action("OrdersList", "Manage", null, "https")
+
+Dziękujemy i zapraszamy ponownie!
+Sklep apphurtex.pl

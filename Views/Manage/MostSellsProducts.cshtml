@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Hurtownia.ViewModels.MostBuyableProducts>
+
+@{
+    ViewBag.Title = "Najczęściej sprzedawane produkty";
+    Layout = "~/Views/Shared/ManageLayout.cshtml";
+}
+<br />
+<br />
+<h2>Lista najczęściej sprzedawanych produktów</h2>
+<br />
+
+@{
+    Layout = "~/Views/Shared/ManageLayout.cshtml";
+}
+<br />
+<br />
+<br />
+
+@using (Html.BeginForm("EditionAllProductsQuantity", "Products"))
+{
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped table-striped-column">
+
+
+            <tr style="padding:5px" class="td info">
+                <th style="padding:10px;">
+                    Nazwa
+                </th>
+                <th style="padding:10px;">
+                    Ilość sprzedanych produktów
+                </th>
+
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+
+                    <td style="padding:10px;" class="td info">
+                        @Html.DisplayFor(modelItem => item.Products.ProductName)
+
+
+                    </td>
+                    <td style="padding:10px;" class="td info">
+
+
+                        @Html.DisplayFor(modelItem => item.Quantity)
+                    </td>
+
+                </tr>
+            }
+
+        </table>
+
+    </div>
+
+}
+<br />
+<br />
+
+<script type="text/javascript" src="engine1/jquery.js"></script>
+<script type="text/javascript" src="engine1/script.js"></script>
+@System.Web.Optimization.Scripts.Render("~/bundles/jquery")

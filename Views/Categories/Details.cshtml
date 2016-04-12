@@ -1,0 +1,44 @@
+﻿@model Hurtownia.Models.Category
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/ManageLayout.cshtml";
+
+}
+
+<h2>Detal Kategorii</h2>
+
+<div>
+    <h4>Kategoria</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NameCategory)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameCategory)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IconFilename)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IconFilename)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CategoryId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

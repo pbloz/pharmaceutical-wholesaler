@@ -1,0 +1,73 @@
+﻿@model IEnumerable<Hurtownia.Models.Product>
+@using Hurtownia.Infrastructure
+@{
+    ViewBag.Title = "Promocje";
+    Layout = "~/Views/Shared/RightSectionLayout.cshtml";
+}
+
+@Styles.Render("~/Content/css")
+<link href="@Url.Content("~/engine1/style.css")" rel="stylesheet" type="text/css" />
+@Html.Partial("_Logo")
+
+<br />
+@using (Html.BeginForm("OurPromotions", "Products", FormMethod.Get))
+{
+
+    @Html.TextBox("search")<label>   </label><input type="submit" value="Wyszukaj" class="btn btn-info btn-sm" /><br /><br />
+    <b>Wyszukaj w : </b>       <label class="radio-inline">
+        @Html.RadioButton("searchBy", "name", true)
+    </label><text>Nazwie</text>
+    <label class="radio-inline">
+        @Html.RadioButton("searchBy", "category")
+    </label> <text>Kategorii</text>
+    <label class="radio-inline">
+        @Html.RadioButton("searchBy", "manufacture")
+    </label><text>Producencie</text>
+    <label class="radio-inline">
+        @Html.RadioButton("searchBy", "description")
+    </label><text>Opisie</text>
+    <br />
+    <br />
+}
+<br />
+<br />
+
+<div id="productlist-section">
+    <div class="div-opacity">
+        <section>
+            <ul class="ThreeColumnsCoversList small-cover-list" style="width:980px">
+                @foreach (var newArrival in Model)
+                {
+                    <li>
+                        <article>
+                            <a class="addtocartlink" href="@Url.Action("AddToCart", "Cart", new { id = newArrival.ProductId })">
+                                <img src="../Content/Images/cart.png" />
+                            </a>
+                            <a class="productdetailslink" href="@Url.Action("Details", "Store", new { id = newArrival.ProductId })">
+                                @*<div class="newFlag"></div>*@
+                                <img class="album-cover" src="@Url.Content("~/Content/Covers/" + newArrival.CoverFileName)" />
+                                <h1>
+                                    @newArrival.ProductName <br /> @newArrival.ProductPrice PLN
+                                </h1>
+                            </a>
+                        </article>
+                    </li>
+                }
+            </ul>
+
+        </section>
+    </div>
+</div>
+<br />
+
+
+
+<script type="text/javascript" src="engine1/wowslider.js"></script>
+<script type="text/javascript" src="~/Content/bootstrap.css"></script>
+<script type="text/javascript" src="~/Content/bootstrap.min.css"></script>
+
+<script type="text/javascript" src="engine1/jquery.js"></script>
+<script type="text/javascript" src="engine1/wowslider.mod.js"></script>
+<script type="text/javascript" src="engine1/script.js"></script>
+@System.Web.Optimization.Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")

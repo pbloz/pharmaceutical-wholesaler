@@ -1,0 +1,36 @@
+﻿
+<table class="table">
+    <tr>
+        <th>
+            Nazwa
+        </th>
+        <th>
+            Opis
+        </th>
+        <th>
+            Kategoria
+        </th>
+        <th>
+            Cena
+        </th>
+    </tr>
+
+    @foreach (var item in (List<Hurtownia.Models.Product>)ViewData["lista"])
+    {
+        <tr>
+            <td>
+                @item.ProductName
+            </td>
+            <td>
+                @item.ProductDescription
+            </td>
+            <td>
+                @item.Category.NameCategory
+            </td>
+            <td>
+                @item.ProductPrice
+            </td>
+        </tr>
+    }
+
+</table>

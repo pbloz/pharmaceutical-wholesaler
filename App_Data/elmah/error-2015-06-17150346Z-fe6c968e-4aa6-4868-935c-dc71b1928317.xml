@@ -1,0 +1,177 @@
+﻿<error errorId="fe6c968e-4aa6-4868-935c-dc71b1928317" application="/LM/W3SVC/5/ROOT" host="LENOVO-PC" type="System.Web.HttpParseException" message="End-of-file was found after the &quot;@&quot; character.  &quot;@&quot; must be followed by a valid code block.  If you want to output an &quot;@&quot;, escape it using the sequence: &quot;@@&quot;&#xD;&#xA;" source="System.Web.WebPages.Razor" detail="System.Web.HttpParseException (0x80004005): End-of-file was found after the &quot;@&quot; character.  &quot;@&quot; must be followed by a valid code block.  If you want to output an &quot;@&quot;, escape it using the sequence: &quot;@@&quot;&#xD;&#xA;&#xD;&#xA;   w System.Web.WebPages.Razor.RazorBuildProvider.EnsureGeneratedCode()&#xD;&#xA;   w System.Web.WebPages.Razor.RazorBuildProvider.get_CodeCompilerType()&#xD;&#xA;   w System.Web.Compilation.BuildProvider.GetCompilerTypeFromBuildProvider(BuildProvider buildProvider)&#xD;&#xA;   w System.Web.Compilation.BuildProvidersCompiler.ProcessBuildProviders()&#xD;&#xA;   w System.Web.Compilation.BuildProvidersCompiler.PerformBuild()&#xD;&#xA;   w System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)&#xD;&#xA;   w System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)&#xD;&#xA;   w System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)&#xD;&#xA;   w System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)&#xD;&#xA;   w System.Web.Compilation.BuildManager.GetCompiledType(VirtualPath virtualPath)&#xD;&#xA;   w System.Web.Compilation.BuildManager.GetCompiledType(String virtualPath)&#xD;&#xA;   w System.Web.Mvc.BuildManagerWrapper.System.Web.Mvc.IBuildManager.GetCompiledType(String virtualPath)&#xD;&#xA;   w System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)&#xD;&#xA;   w Castle.Proxies.Invocations.IView_Render.InvokeMethodOnTarget()&#xD;&#xA;   w Castle.DynamicProxy.AbstractInvocation.Proceed()&#xD;&#xA;   w Glimpse.Core.Extensibility.CastleInvocationToAlternateMethodContextAdapter.Proceed()&#xD;&#xA;   w Glimpse.Core.Extensibility.ExecutionTimer.Time(Action action)&#xD;&#xA;   w Glimpse.Core.Extensions.AlternateMethodContextExtensions.TryProceedWithTimer(IAlternateMethodContext context, TimerResult&amp; timerResult)&#xD;&#xA;   w Glimpse.Core.Extensibility.AlternateMethod.NewImplementation(IAlternateMethodContext context)&#xD;&#xA;   w Glimpse.Core.Extensibility.AlternateTypeToCastleInterceptorAdapter.Intercept(IInvocation invocation)&#xD;&#xA;   w Castle.DynamicProxy.AbstractInvocation.Proceed()&#xD;&#xA;   w Castle.Proxies.IViewProxy.Render(ViewContext viewContext, TextWriter writer)&#xD;&#xA;   w System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)&#xD;&#xA;   w Castle.Proxies.AsyncControllerActionInvokerProxy.InvokeActionResult_callback(ControllerContext controllerContext, ActionResult actionResult)&#xD;&#xA;   w Castle.Proxies.Invocations.ControllerActionInvoker_InvokeActionResult.InvokeMethodOnTarget()&#xD;&#xA;   w Castle.DynamicProxy.AbstractInvocation.Proceed()&#xD;&#xA;   w Glimpse.Core.Extensibility.CastleInvocationToAlternateMethodContextAdapter.Proceed()&#xD;&#xA;   w Glimpse.Core.Extensibility.ExecutionTimer.Time(Action action)&#xD;&#xA;   w Glimpse.Core.Extensions.AlternateMethodContextExtensions.TryProceedWithTimer(IAlternateMethodContext context, TimerResult&amp; timerResult)&#xD;&#xA;   w Glimpse.Core.Extensibility.AlternateMethod.NewImplementation(IAlternateMethodContext context)&#xD;&#xA;   w Glimpse.Core.Extensibility.AlternateTypeToCastleInterceptorAdapter.Intercept(IInvocation invocation)&#xD;&#xA;   w Castle.DynamicProxy.AbstractInvocation.Proceed()&#xD;&#xA;   w Castle.Proxies.AsyncControllerActionInvokerProxy.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)&#xD;&#xA;   w System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)&#xD;&#xA;   w System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)&#xD;&#xA;   w System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass21.&lt;&gt;c__DisplayClass2b.&lt;BeginInvokeAction&gt;b__1c()&#xD;&#xA;   w System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass21.&lt;BeginInvokeAction&gt;b__1e(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   w System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.Controller.&lt;BeginExecuteCore&gt;b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   w System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.Controller.&lt;BeginExecute&gt;b__15(IAsyncResult asyncResult, Controller controller)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   w System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.MvcHandler.&lt;BeginProcessRequest&gt;b__5(IAsyncResult asyncResult, ProcessRequestState innerState)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   w System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)&#xD;&#xA;   w System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()&#xD;&#xA;   w System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)" user="admin@hurtownia.pl" time="2015-06-17T15:03:46.4089240Z" statusCode="500" webHostHtmlMessage="&lt;!DOCTYPE html&gt;&#xD;&#xA;&lt;html&gt;&#xD;&#xA;    &lt;head&gt;&#xD;&#xA;        &lt;title&gt;Błąd analizatora składni&lt;/title&gt;&#xD;&#xA;        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;&#xD;&#xA;        &lt;style&gt;&#xD;&#xA;         body {font-family:&quot;Verdana&quot;;font-weight:normal;font-size: .7em;color:black;} &#xD;&#xA;         p {font-family:&quot;Verdana&quot;;font-weight:normal;color:black;margin-top: -5px}&#xD;&#xA;         b {font-family:&quot;Verdana&quot;;font-weight:bold;color:black;margin-top: -5px}&#xD;&#xA;         H1 { font-family:&quot;Verdana&quot;;font-weight:normal;font-size:18pt;color:red }&#xD;&#xA;         H2 { font-family:&quot;Verdana&quot;;font-weight:normal;font-size:14pt;color:maroon }&#xD;&#xA;         pre {font-family:&quot;Consolas&quot;,&quot;Lucida Console&quot;,Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}&#xD;&#xA;         .marker {font-weight: bold; color: black;text-decoration: none;}&#xD;&#xA;         .version {color: gray;}&#xD;&#xA;         .error {margin-bottom: 10px;}&#xD;&#xA;         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }&#xD;&#xA;         @media screen and (max-width: 639px) {&#xD;&#xA;          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }&#xD;&#xA;         }&#xD;&#xA;         @media screen and (max-width: 479px) {&#xD;&#xA;          pre { width: 280px; }&#xD;&#xA;         }&#xD;&#xA;        &lt;/style&gt;&#xD;&#xA;    &lt;/head&gt;&#xD;&#xA;&#xD;&#xA;    &lt;body bgcolor=&quot;white&quot;&gt;&#xD;&#xA;&#xD;&#xA;            &lt;span&gt;&lt;H1&gt;Błąd serwera w aplikacji '/'.&lt;hr width=100% size=1 color=silver&gt;&lt;/H1&gt;&#xD;&#xA;&#xD;&#xA;            &lt;h2&gt; &lt;i&gt;Błąd analizatora składni&lt;/i&gt; &lt;/h2&gt;&lt;/span&gt;&#xD;&#xA;&#xD;&#xA;            &lt;font face=&quot;Arial, Helvetica, Geneva, SunSans-Regular, sans-serif &quot;&gt;&#xD;&#xA;&#xD;&#xA;            &lt;b&gt; Opis: &lt;/b&gt;Wystąpił błąd podczas analizowania zasobu wymaganego do obsłużenia tego żądania. Przejrzyj następujące szczegółowe informacje o błędzie analizy i zmodyfikuj odpowiednio źródło.&#xD;&#xA;            &lt;br&gt;&lt;br&gt;&#xD;&#xA;&#xD;&#xA;            &lt;b&gt; Komunikat o błędzie analizatora składni: &lt;/b&gt;End-of-file was found after the &amp;quot;@&amp;quot; character. &amp;nbsp;&amp;quot;@&amp;quot; must be followed by a valid code block. &amp;nbsp;If you want to output an &amp;quot;@&amp;quot;, escape it using the sequence: &amp;quot;@@&amp;quot;&lt;br&gt;&lt;br&gt;&lt;br&gt;&#xD;&#xA;&#xD;&#xA;            &lt;b&gt;Błąd źródła:&lt;/b&gt; &lt;br&gt;&lt;br&gt;&#xD;&#xA;&#xD;&#xA;            &lt;table width=100% bgcolor=&quot;#ffffcc&quot;&gt;&#xD;&#xA;               &lt;tr&gt;&#xD;&#xA;                  &lt;td&gt;&#xD;&#xA;                      &lt;code&gt;&lt;pre&gt;&#xD;&#xA;&#xD;&#xA;Wiersz 99:     &amp;lt;/div&amp;gt;&#xD;&#xA;Wiersz 100:&#xD;&#xA;&lt;font color=red&gt;Wiersz 101:}*@&#xD;&#xA;&lt;/font&gt;&lt;/pre&gt;&lt;/code&gt;&#xD;&#xA;&#xD;&#xA;                  &lt;/td&gt;&#xD;&#xA;               &lt;/tr&gt;&#xD;&#xA;            &lt;/table&gt;&#xD;&#xA;&#xD;&#xA;            &lt;br&gt;&#xD;&#xA;&#xD;&#xA;            &lt;b&gt; Plik źródłowy: &lt;/b&gt; /Views/Home/About.cshtml&lt;b&gt; &amp;nbsp;&amp;nbsp; Wiersz: &lt;/b&gt; 101&#xD;&#xA;            &lt;br&gt;&lt;br&gt;&#xD;&#xA;&#xD;&#xA;    &lt;/body&gt;&#xD;&#xA;&lt;/html&gt;&#xD;&#xA;">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_ACCEPT:text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:pl,en-US;q=0.7,en;q=0.3&#xD;&#xA;HTTP_COOKIE:glimpsePolicy=On; glimpseOptions=%7B%22glimpsePolicy%22%3Anull%7D; ai_user=15C8CF29-40C5-4444-A523-CD3F4CBF2A95|2015-04-16T18:07:44.805Z; ai_session=985448BF-A4BA-4A05-9894-88B778D1A5E7|2015-04-16T18:07:44.810Z|2015-04-16T18:16:14.403Z; .AspNet.ApplicationCookie=GrOtJtGySozYCjWB_s1bQnsRMNGdX-cWj7Gh69uvsTPUuTKDnwr5eTsCe-d9TwhNcqQlk0-u3GCMobK2Ff4goOMQp67ays7u089zNGDkazW7PX1xmswMs_-I9XvUm_4dZfYOEBqYhLwMlB4ruBwuPoxYKcGlL9S5XiN0joGYaPSUGNULzh4PaRdbdrVL-UWNsTVmoInKU6IUzEFDpjQo6CLLWqtYS0PkuuaKjJwlgLQvDB8gbVq0Ma_j974tDSK9BiZu8HoCt6lfXAwua2jJfRvAi4yrxNf3Kaz6KTmrW3QToC5Y93oLbvyMQLKbheOPP5uNZIwDnRNoZo4e9yy2bDjti5A5QA0p3DLT-ekui1g4qdf0PhB_3k958mB343TGkH8t9S6iyd7r9jO3_VoaD-_uv0-SdHgwMnj2V8h-lAo9C_D-KRQ7AnNfK997SG7rhg8VabawTFLB-yD1QgDumGBfSpSKBkMwqfo8WxyvVcn-zhzq7W6igSXpkzGNnGkc6-LcCVDVUmXNOFj3L0TZkQll0B5Cndtor3v3QPFy1qY; __RequestVerificationToken=RdkUMZV0PAQSEnIIj74QCA1TZ9aSTAA6biCEVIvszTp_ldsemJn0hk8O2yAixJe7ASeQVzTOtEfYIEpPXIXwZZ5TdsnxtH0y5cIBSCWE2Z81; glimpseId=admin@hurtownia.pl&#xD;&#xA;HTTP_HOST:localhost:44300&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 6.3; WOW64; rv:38.0) Gecko/20100101 Firefox/38.0&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Connection: keep-alive&#xD;&#xA;Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;&#xA;Accept-Encoding: gzip, deflate&#xD;&#xA;Accept-Language: pl,en-US;q=0.7,en;q=0.3&#xD;&#xA;Cookie: glimpsePolicy=On; glimpseOptions=%7B%22glimpsePolicy%22%3Anull%7D; ai_user=15C8CF29-40C5-4444-A523-CD3F4CBF2A95|2015-04-16T18:07:44.805Z; ai_session=985448BF-A4BA-4A05-9894-88B778D1A5E7|2015-04-16T18:07:44.810Z|2015-04-16T18:16:14.403Z; .AspNet.ApplicationCookie=GrOtJtGySozYCjWB_s1bQnsRMNGdX-cWj7Gh69uvsTPUuTKDnwr5eTsCe-d9TwhNcqQlk0-u3GCMobK2Ff4goOMQp67ays7u089zNGDkazW7PX1xmswMs_-I9XvUm_4dZfYOEBqYhLwMlB4ruBwuPoxYKcGlL9S5XiN0joGYaPSUGNULzh4PaRdbdrVL-UWNsTVmoInKU6IUzEFDpjQo6CLLWqtYS0PkuuaKjJwlgLQvDB8gbVq0Ma_j974tDSK9BiZu8HoCt6lfXAwua2jJfRvAi4yrxNf3Kaz6KTmrW3QToC5Y93oLbvyMQLKbheOPP5uNZIwDnRNoZo4e9yy2bDjti5A5QA0p3DLT-ekui1g4qdf0PhB_3k958mB343TGkH8t9S6iyd7r9jO3_VoaD-_uv0-SdHgwMnj2V8h-lAo9C_D-KRQ7AnNfK997SG7rhg8VabawTFLB-yD1QgDumGBfSpSKBkMwqfo8WxyvVcn-zhzq7W6igSXpkzGNnGkc6-LcCVDVUmXNOFj3L0TZkQll0B5Cndtor3v3QPFy1qY; __RequestVerificationToken=RdkUMZV0PAQSEnIIj74QCA1TZ9aSTAA6biCEVIvszTp_ldsemJn0hk8O2yAixJe7ASeQVzTOtEfYIEpPXIXwZZ5TdsnxtH0y5cIBSCWE2Z81; glimpseId=admin@hurtownia.pl&#xD;&#xA;Host: localhost:44300&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64; rv:38.0) Gecko/20100101 Firefox/38.0&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/5/ROOT" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="C:\PZ\Inzynierka\v1.8\v1.7\Hurtownia\Hurtownia\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="ApplicationCookie" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="admin@hurtownia.pl" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="*****" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="admin@hurtownia.pl" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="256" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="1024" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="CN=localhost" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="CN=localhost" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="0" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="on" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="256" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="1024" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="CN=localhost" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="CN=localhost" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="5" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/5" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/Home/About" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="C:\PZ\Inzynierka\v1.8\v1.7\Hurtownia\Hurtownia\Home\About" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="1155" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="GET" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/Home/About" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="44300" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="1" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/8.0" />
+    </item>
+    <item name="URL">
+      <value string="/Home/About" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="pl,en-US;q=0.7,en;q=0.3" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="glimpsePolicy=On; glimpseOptions=%7B%22glimpsePolicy%22%3Anull%7D; ai_user=15C8CF29-40C5-4444-A523-CD3F4CBF2A95|2015-04-16T18:07:44.805Z; ai_session=985448BF-A4BA-4A05-9894-88B778D1A5E7|2015-04-16T18:07:44.810Z|2015-04-16T18:16:14.403Z; .AspNet.ApplicationCookie=GrOtJtGySozYCjWB_s1bQnsRMNGdX-cWj7Gh69uvsTPUuTKDnwr5eTsCe-d9TwhNcqQlk0-u3GCMobK2Ff4goOMQp67ays7u089zNGDkazW7PX1xmswMs_-I9XvUm_4dZfYOEBqYhLwMlB4ruBwuPoxYKcGlL9S5XiN0joGYaPSUGNULzh4PaRdbdrVL-UWNsTVmoInKU6IUzEFDpjQo6CLLWqtYS0PkuuaKjJwlgLQvDB8gbVq0Ma_j974tDSK9BiZu8HoCt6lfXAwua2jJfRvAi4yrxNf3Kaz6KTmrW3QToC5Y93oLbvyMQLKbheOPP5uNZIwDnRNoZo4e9yy2bDjti5A5QA0p3DLT-ekui1g4qdf0PhB_3k958mB343TGkH8t9S6iyd7r9jO3_VoaD-_uv0-SdHgwMnj2V8h-lAo9C_D-KRQ7AnNfK997SG7rhg8VabawTFLB-yD1QgDumGBfSpSKBkMwqfo8WxyvVcn-zhzq7W6igSXpkzGNnGkc6-LcCVDVUmXNOFj3L0TZkQll0B5Cndtor3v3QPFy1qY; __RequestVerificationToken=RdkUMZV0PAQSEnIIj74QCA1TZ9aSTAA6biCEVIvszTp_ldsemJn0hk8O2yAixJe7ASeQVzTOtEfYIEpPXIXwZZ5TdsnxtH0y5cIBSCWE2Z81; glimpseId=admin@hurtownia.pl" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:44300" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 6.3; WOW64; rv:38.0) Gecko/20100101 Firefox/38.0" />
+    </item>
+  </serverVariables>
+  <cookies>
+    <item name="glimpsePolicy">
+      <value string="On" />
+    </item>
+    <item name="glimpseOptions">
+      <value string="%7B%22glimpsePolicy%22%3Anull%7D" />
+    </item>
+    <item name="ai_user">
+      <value string="15C8CF29-40C5-4444-A523-CD3F4CBF2A95|2015-04-16T18:07:44.805Z" />
+    </item>
+    <item name="ai_session">
+      <value string="985448BF-A4BA-4A05-9894-88B778D1A5E7|2015-04-16T18:07:44.810Z|2015-04-16T18:16:14.403Z" />
+    </item>
+    <item name=".AspNet.ApplicationCookie">
+      <value string="GrOtJtGySozYCjWB_s1bQnsRMNGdX-cWj7Gh69uvsTPUuTKDnwr5eTsCe-d9TwhNcqQlk0-u3GCMobK2Ff4goOMQp67ays7u089zNGDkazW7PX1xmswMs_-I9XvUm_4dZfYOEBqYhLwMlB4ruBwuPoxYKcGlL9S5XiN0joGYaPSUGNULzh4PaRdbdrVL-UWNsTVmoInKU6IUzEFDpjQo6CLLWqtYS0PkuuaKjJwlgLQvDB8gbVq0Ma_j974tDSK9BiZu8HoCt6lfXAwua2jJfRvAi4yrxNf3Kaz6KTmrW3QToC5Y93oLbvyMQLKbheOPP5uNZIwDnRNoZo4e9yy2bDjti5A5QA0p3DLT-ekui1g4qdf0PhB_3k958mB343TGkH8t9S6iyd7r9jO3_VoaD-_uv0-SdHgwMnj2V8h-lAo9C_D-KRQ7AnNfK997SG7rhg8VabawTFLB-yD1QgDumGBfSpSKBkMwqfo8WxyvVcn-zhzq7W6igSXpkzGNnGkc6-LcCVDVUmXNOFj3L0TZkQll0B5Cndtor3v3QPFy1qY" />
+    </item>
+    <item name="__RequestVerificationToken">
+      <value string="RdkUMZV0PAQSEnIIj74QCA1TZ9aSTAA6biCEVIvszTp_ldsemJn0hk8O2yAixJe7ASeQVzTOtEfYIEpPXIXwZZ5TdsnxtH0y5cIBSCWE2Z81" />
+    </item>
+    <item name="glimpseId">
+      <value string="admin@hurtownia.pl" />
+    </item>
+  </cookies>
+</error>

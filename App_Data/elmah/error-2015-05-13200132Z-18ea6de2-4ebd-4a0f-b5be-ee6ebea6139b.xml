@@ -1,0 +1,206 @@
+﻿<error errorId="18ea6de2-4ebd-4a0f-b5be-ee6ebea6139b" application="/LM/W3SVC/5/ROOT" host="LENOVO-PC" type="System.Data.SqlClient.SqlException" message="Wystąpił błąd związany z siecią lub wystąpieniem podczas ustanawiania połączenia z serwerem programu SQL Server. Nie można odnaleźć serwera lub jest on niedostępny. Sprawdź, czy nazwa wystąpienia jest poprawna i czy konfiguracja serwera programu SQL Server zezwala na połączenia zdalne.  (provider: SQL Network Interfaces, error: 26 - Błąd podczas lokalizowania określonego serwera/wystąpienia)" source=".Net SqlClient Data Provider" detail="System.Web.HttpException (0x80004005): Nie można połączyć się z bazą danych SQL Server. ---&gt; System.Web.HttpException (0x80004005): Nie można połączyć się z bazą danych SQL Server. ---&gt; System.Data.SqlClient.SqlException (0x80131904): Wystąpił błąd związany z siecią lub wystąpieniem podczas ustanawiania połączenia z serwerem programu SQL Server. Nie można odnaleźć serwera lub jest on niedostępny. Sprawdź, czy nazwa wystąpienia jest poprawna i czy konfiguracja serwera programu SQL Server zezwala na połączenia zdalne.  (provider: SQL Network Interfaces, error: 26 - Błąd podczas lokalizowania określonego serwera/wystąpienia)&#xD;&#xA;   w System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)&#xD;&#xA;   w System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)&#xD;&#xA;   w System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover)&#xD;&#xA;   w System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)&#xD;&#xA;   w System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)&#xD;&#xA;   w System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)&#xD;&#xA;   w System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData)&#xD;&#xA;   w System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)&#xD;&#xA;   w System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup, DbConnectionOptions userOptions)&#xD;&#xA;   w System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal&amp; connection)&#xD;&#xA;   w System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)&#xD;&#xA;   w System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)&#xD;&#xA;   w System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)&#xD;&#xA;   w System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)&#xD;&#xA;   w System.Data.SqlClient.SqlConnection.Open()&#xD;&#xA;   w System.Web.Management.SqlServices.GetSqlConnection(String server, String user, String password, Boolean trusted, String connectionString)&#xD;&#xA;ClientConnectionId:00000000-0000-0000-0000-000000000000&#xD;&#xA;Error Number:-1,State:0,Class:20&#xD;&#xA;   w System.Web.Management.SqlServices.GetSqlConnection(String server, String user, String password, Boolean trusted, String connectionString)&#xD;&#xA;   w System.Web.Management.SqlServices.SetupApplicationServices(String server, String user, String password, Boolean trusted, String connectionString, String database, String dbFileName, SqlFeatures features, Boolean install)&#xD;&#xA;   w System.Web.Management.SqlServices.Install(String database, String dbFileName, String connectionString)&#xD;&#xA;   w System.Web.DataAccess.SqlConnectionHelper.CreateMdfFile(String fullFileName, String dataDir, String connectionString)&#xD;&#xA;   w System.Web.DataAccess.SqlConnectionHelper.CreateMdfFile(String fullFileName, String dataDir, String connectionString)&#xD;&#xA;   w System.Web.DataAccess.SqlConnectionHelper.EnsureDBFile(String connectionString)&#xD;&#xA;   w System.Web.DataAccess.SqlConnectionHelper.GetConnection(String connectionString, Boolean revertImpersonation)&#xD;&#xA;   w System.Web.Security.SqlMembershipProvider.GetUser(String username, Boolean userIsOnline)&#xD;&#xA;   w System.Web.Security.Membership.GetUser(String username, Boolean userIsOnline)&#xD;&#xA;   w System.Web.Security.Membership.GetUser(String username)&#xD;&#xA;   w Hurtownia.Controllers.HomeController.Contact(String Email, String Topic, String Autor, String Text) w c:\PZ\Inzynierka\v1.7\Hurtownia\Hurtownia\Controllers\HomeController.cs:wiersz 178&#xD;&#xA;   w lambda_method(Closure , ControllerBase , Object[] )&#xD;&#xA;   w System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)&#xD;&#xA;   w System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)&#xD;&#xA;   w System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;BeginInvokeSynchronousActionMethod&gt;b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   w Castle.Proxies.AsyncControllerActionInvokerProxy.EndInvokeActionMethod_callback(IAsyncResult asyncResult)&#xD;&#xA;   w Castle.Proxies.Invocations.AsyncControllerActionInvoker_EndInvokeActionMethod.InvokeMethodOnTarget()&#xD;&#xA;   w Castle.DynamicProxy.AbstractInvocation.Proceed()&#xD;&#xA;   w Glimpse.Core.Extensibility.CastleInvocationToAlternateMethodContextAdapter.Proceed()&#xD;&#xA;   w Glimpse.Mvc.AlternateType.AsyncActionInvoker.EndInvokeActionMethod.NewImplementation(IAlternateMethodContext context)&#xD;&#xA;   w Glimpse.Core.Extensibility.AlternateTypeToCastleInterceptorAdapter.Intercept(IInvocation invocation)&#xD;&#xA;   w Castle.DynamicProxy.AbstractInvocation.Proceed()&#xD;&#xA;   w Castle.Proxies.AsyncControllerActionInvokerProxy.EndInvokeActionMethod(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.&lt;InvokeActionMethodFilterAsynchronouslyRecursive&gt;b__3f()&#xD;&#xA;   w System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.&lt;&gt;c__DisplayClass48.&lt;InvokeActionMethodFilterAsynchronouslyRecursive&gt;b__41()&#xD;&#xA;   w System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass33.&lt;BeginInvokeActionMethodWithFilters&gt;b__32(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   w System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass21.&lt;&gt;c__DisplayClass2b.&lt;BeginInvokeAction&gt;b__1c()&#xD;&#xA;   w System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass21.&lt;BeginInvokeAction&gt;b__1e(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   w System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.Controller.&lt;BeginExecuteCore&gt;b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   w System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.Controller.&lt;BeginExecute&gt;b__15(IAsyncResult asyncResult, Controller controller)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   w System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.MvcHandler.&lt;BeginProcessRequest&gt;b__5(IAsyncResult asyncResult, ProcessRequestState innerState)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   w System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)&#xD;&#xA;   w System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()&#xD;&#xA;   w System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)" user="admin@hurtownia.pl" time="2015-05-13T20:01:32.8211060Z" statusCode="500" webHostHtmlMessage="&lt;!DOCTYPE html&gt;&#xD;&#xA;&lt;html&gt;&#xD;&#xA;    &lt;head&gt;&#xD;&#xA;        &lt;title&gt;Wystąpił błąd związany z siecią lub wystąpieniem podczas ustanawiania połączenia z serwerem programu SQL Server. Nie można odnaleźć serwera lub jest on niedostępny. Sprawdź, czy nazwa wystąpienia jest poprawna i czy konfiguracja serwera programu SQL Server zezwala na połączenia zdalne. &amp;nbsp;(provider: SQL Network Interfaces, error: 26 - Błąd podczas lokalizowania określonego serwera/wystąpienia)&lt;/title&gt;&#xD;&#xA;        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;&#xD;&#xA;        &lt;style&gt;&#xD;&#xA;         body {font-family:&quot;Verdana&quot;;font-weight:normal;font-size: .7em;color:black;} &#xD;&#xA;         p {font-family:&quot;Verdana&quot;;font-weight:normal;color:black;margin-top: -5px}&#xD;&#xA;         b {font-family:&quot;Verdana&quot;;font-weight:bold;color:black;margin-top: -5px}&#xD;&#xA;         H1 { font-family:&quot;Verdana&quot;;font-weight:normal;font-size:18pt;color:red }&#xD;&#xA;         H2 { font-family:&quot;Verdana&quot;;font-weight:normal;font-size:14pt;color:maroon }&#xD;&#xA;         pre {font-family:&quot;Consolas&quot;,&quot;Lucida Console&quot;,Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}&#xD;&#xA;         .marker {font-weight: bold; color: black;text-decoration: none;}&#xD;&#xA;         .version {color: gray;}&#xD;&#xA;         .error {margin-bottom: 10px;}&#xD;&#xA;         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }&#xD;&#xA;         @media screen and (max-width: 639px) {&#xD;&#xA;          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }&#xD;&#xA;         }&#xD;&#xA;         @media screen and (max-width: 479px) {&#xD;&#xA;          pre { width: 280px; }&#xD;&#xA;         }&#xD;&#xA;        &lt;/style&gt;&#xD;&#xA;    &lt;/head&gt;&#xD;&#xA;&#xD;&#xA;    &lt;body bgcolor=&quot;white&quot;&gt;&#xD;&#xA;&#xD;&#xA;            &lt;span&gt;&lt;H1&gt;Błąd serwera w aplikacji '/'.&lt;hr width=100% size=1 color=silver&gt;&lt;/H1&gt;&#xD;&#xA;&#xD;&#xA;            &lt;h2&gt; &lt;i&gt;Wystąpił błąd związany z siecią lub wystąpieniem podczas ustanawiania połączenia z serwerem programu SQL Server. Nie można odnaleźć serwera lub jest on niedostępny. Sprawdź, czy nazwa wystąpienia jest poprawna i czy konfiguracja serwera programu SQL Server zezwala na połączenia zdalne. &amp;nbsp;(provider: SQL Network Interfaces, error: 26 - Błąd podczas lokalizowania określonego serwera/wystąpienia)&lt;/i&gt; &lt;/h2&gt;&lt;/span&gt;&#xD;&#xA;&#xD;&#xA;            &lt;font face=&quot;Arial, Helvetica, Geneva, SunSans-Regular, sans-serif &quot;&gt;&#xD;&#xA;&#xD;&#xA;            &lt;b&gt; Opis: &lt;/b&gt;Podczas wykonywania bieżącego żądania sieci Web wystąpił nieobsługiwany wyjątek. Aby uzyskać dodatkowe informacje o błędzie i miejscu jego występowania w kodzie, przejrzyj ślad stosu.&#xD;&#xA;&#xD;&#xA;            &lt;br&gt;&lt;br&gt;&#xD;&#xA;&#xD;&#xA;            &lt;b&gt; Błąd automatycznego tworzenia pliku bazy danych SQLExpress: &lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;p&gt;Parametry połączenia określają lokalne wystąpienie programu Sql Server Express za pomocą lokalizacji bazy danych w katalogu App_Data aplikacji. Dostawca próbował automatycznie utworzyć bazę danych usług aplikacji, ponieważ stwierdził, że baza nie istnieje. Poniższe wymagania konfiguracyjne muszą być spełnione, aby pomyślnie sprawdzić, czy baza danych usług aplikacji istnieje, i automatycznie utworzyć tę bazę:&lt;br&gt;&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Jeśli aplikacja jest uruchamiana w systemie Windows 7 lub Windows Server 2008R2, należy wykonać specjalne kroki konfiguracji w celu włączenia automatycznego tworzenia bazy danych dostawcy. Dodatkowe informacje są dostępne pod adresem: http://go.microsoft.com/fwlink/?LinkId=160102. Jeśli katalog App_Data aplikacji nie istnieje, konto serwera sieci web musi mieć uprawnienia do odczytu i zapisu w odniesieniu do katalogu aplikacji. Jest to konieczne, ponieważ konto serwera sieci web automatycznie tworzy katalog App_Data, jeśli ten katalog nie istnieje.&lt;/li&gt;&#xA;&lt;li&gt;Jeśli katalog App_Data aplikacji istnieje, konto serwera sieci web musi mieć tylko uprawnienia do odczytu i zapisu w odniesieniu do katalogu App_Data aplikacji. Jest to konieczne, ponieważ konto serwera sieci web próbuje sprawdzać, czy w katalogu App_Data aplikacji istnieje baza danych programu Sql Server Express. Odwołanie dostępu do odczytu do katalogu App_Data z konta serwera sieci uniemożliwi dostawcy poprawne określenie, czy baza danych programu Sql Server Express już istnieje. To spowoduje błąd, gdy dostawca będzie próbować utworzyć duplikat istniejącej bazy danych. Dostęp do zapisu jest wymagany, ponieważ poświadczenia konta serwera sieci web są używane podczas tworzenia nowej bazy danych.&lt;/li&gt;&#xA;&lt;li&gt;Na komputerze musi być zainstalowany program Sql Server Express.&lt;/li&gt;&#xA;&lt;li&gt;Tożsamość procesu konta serwera sieci web musi mieć lokalny profil użytkownika. Zobacz dokument readme, aby uzyskać szczegółowe informacje na temat tworzenia lokalnego profilu użytkownika dla konta komputera i domeny.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;br&gt;&lt;br&gt;&#xD;&#xA;&#xD;&#xA;            &lt;b&gt;Błąd źródła:&lt;/b&gt; &lt;br&gt;&lt;br&gt;&#xD;&#xA;&#xD;&#xA;            &lt;table width=100% bgcolor=&quot;#ffffcc&quot;&gt;&#xD;&#xA;               &lt;tr&gt;&#xD;&#xA;                  &lt;td&gt;&#xD;&#xA;                      &lt;code&gt;&#xD;&#xA;&#xD;&#xA;Podczas wykonywania bieżącego żądania sieci Web został wygenerowany nieobsługiwany wyjątek. Informacje dotyczące pochodzenia i lokalizacji wyjątku można zidentyfikować przy użyciu poniższego śladu stosu wyjątku.&lt;/code&gt;&#xD;&#xA;&#xD;&#xA;                  &lt;/td&gt;&#xD;&#xA;               &lt;/tr&gt;&#xD;&#xA;            &lt;/table&gt;&#xD;&#xA;&#xD;&#xA;            &lt;br&gt;&#xD;&#xA;&#xD;&#xA;            &lt;b&gt;Ślad stosu:&lt;/b&gt; &lt;br&gt;&lt;br&gt;&#xD;&#xA;&#xD;&#xA;            &lt;table width=100% bgcolor=&quot;#ffffcc&quot;&gt;&#xD;&#xA;               &lt;tr&gt;&#xD;&#xA;                  &lt;td&gt;&#xD;&#xA;                      &lt;code&gt;&lt;pre&gt;&#xD;&#xA;&#xD;&#xA;[SqlException (0x80131904): Wystąpił błąd związany z siecią lub wystąpieniem podczas ustanawiania połączenia z serwerem programu SQL Server. Nie można odnaleźć serwera lub jest on niedostępny. Sprawdź, czy nazwa wystąpienia jest poprawna i czy konfiguracja serwera programu SQL Server zezwala na połączenia zdalne.  (provider: SQL Network Interfaces, error: 26 - Błąd podczas lokalizowania określonego serwera/wystąpienia)]&#xD;&#xA;   System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction) +5341687&#xD;&#xA;   System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose) +546&#xD;&#xA;   System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover) +5353471&#xD;&#xA;   System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover) +145&#xD;&#xA;   System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout) +923&#xD;&#xA;   System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance) +311&#xD;&#xA;   System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData) +646&#xD;&#xA;   System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions) +5356769&#xD;&#xA;   System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup, DbConnectionOptions userOptions) +38&#xD;&#xA;   System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal&amp;amp; connection) +5358970&#xD;&#xA;   System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions) +146&#xD;&#xA;   System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions) +16&#xD;&#xA;   System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry) +94&#xD;&#xA;   System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry) +110&#xD;&#xA;   System.Data.SqlClient.SqlConnection.Open() +96&#xD;&#xA;   System.Web.Management.SqlServices.GetSqlConnection(String server, String user, String password, Boolean trusted, String connectionString) +75&#xD;&#xA;&#xD;&#xA;[HttpException (0x80004005): Nie można połączyć się z bazą danych SQL Server.]&#xD;&#xA;   System.Web.Management.SqlServices.GetSqlConnection(String server, String user, String password, Boolean trusted, String connectionString) +130&#xD;&#xA;   System.Web.Management.SqlServices.SetupApplicationServices(String server, String user, String password, Boolean trusted, String connectionString, String database, String dbFileName, SqlFeatures features, Boolean install) +89&#xD;&#xA;   System.Web.Management.SqlServices.Install(String database, String dbFileName, String connectionString) +27&#xD;&#xA;   System.Web.DataAccess.SqlConnectionHelper.CreateMdfFile(String fullFileName, String dataDir, String connectionString) +386&#xD;&#xA;&lt;/pre&gt;&lt;/code&gt;&#xD;&#xA;&#xD;&#xA;                  &lt;/td&gt;&#xD;&#xA;               &lt;/tr&gt;&#xD;&#xA;            &lt;/table&gt;&#xD;&#xA;&#xD;&#xA;            &lt;br&gt;&#xD;&#xA;&#xD;&#xA;    &lt;/body&gt;&#xD;&#xA;&lt;/html&gt;&#xD;&#xA;">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_CONTENT_LENGTH:50&#xD;&#xA;HTTP_CONTENT_TYPE:application/x-www-form-urlencoded&#xD;&#xA;HTTP_ACCEPT:text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:pl,en-US;q=0.7,en;q=0.3&#xD;&#xA;HTTP_COOKIE:glimpsePolicy=On; glimpseOptions=%7B%22glimpsePolicy%22%3Anull%7D; ai_user=15C8CF29-40C5-4444-A523-CD3F4CBF2A95|2015-04-16T18:07:44.805Z; ai_session=985448BF-A4BA-4A05-9894-88B778D1A5E7|2015-04-16T18:07:44.810Z|2015-04-16T18:16:14.403Z; __RequestVerificationToken=zsJ7-eVG6fj6tdWf2BhOc6RREcO8x9VM0PcHQak9Q3dWrqgfO0r6BulxZ_I5l-nHyMjkzz61heHWKAC8eGm7I_1lbpUXvSL_H3D8olPR69o1; glimpseId=hurtexinz@gmail.com; .AspNet.Correlation.Google=utQv7wzvycbS_j4rzmviUsbGhViLbKVQRj2ixTNAPXQ; .AspNet.Correlation.Facebook=QDRYTG0Bnk-rjJVtdSypnRw37dzbsYUBbMpz-o-ECIQ; .AspNet.ApplicationCookie=Tcn0s29OllEqMnSV6L8_CjCVoIHnQ0L-HNJuHe_Wvyes-_KKzcdFH6MlqvIt2V1gai5EOrR0V_hw39MSz5NvciYSxb_50URaRsJaqXIfqxi05XH1MYKfoseCds5-_8JvXnD-aU0eOhSCrE5Y0xdcTE3_wHnzOE9_2FRKUgvGQvYRojKMGAKOKlLO9VC5VtQ2gEluNnTSia7tNBgEEk_Ink0giC_zufSd3zwPidtwmAiMBSiEEumsrb6bXDQmnrHWZTikI6ln4t8rDhk35CW00tozjGCIBJp4N0L12jh4tpSKSFu2IicueIfStb8fU-bHUSyPdsvs34wbQ3UlIRf55trb9FsRo3BhKBJMBnRl9jTEBamzmBOm-JlKxsWF3EEF3AX1JUzGGSMd5D94foV5DArWwCRdOMO337RpgC3CncRVlWWJiZbBqK1bRtRxVQF6EXOTjgSWWY9buF9EaAtkOsnL6itArvBLMm0681rKrxFMbPNSFN9gf0h8AQWRSOJIM14zZCqCNRZffoTtilColQ&#xD;&#xA;HTTP_HOST:localhost:44300&#xD;&#xA;HTTP_REFERER:https://localhost:44300/Home/Contact&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 6.3; WOW64; rv:37.0) Gecko/20100101 Firefox/37.0&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Connection: keep-alive&#xD;&#xA;Content-Length: 50&#xD;&#xA;Content-Type: application/x-www-form-urlencoded&#xD;&#xA;Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;&#xA;Accept-Encoding: gzip, deflate&#xD;&#xA;Accept-Language: pl,en-US;q=0.7,en;q=0.3&#xD;&#xA;Cookie: glimpsePolicy=On; glimpseOptions=%7B%22glimpsePolicy%22%3Anull%7D; ai_user=15C8CF29-40C5-4444-A523-CD3F4CBF2A95|2015-04-16T18:07:44.805Z; ai_session=985448BF-A4BA-4A05-9894-88B778D1A5E7|2015-04-16T18:07:44.810Z|2015-04-16T18:16:14.403Z; __RequestVerificationToken=zsJ7-eVG6fj6tdWf2BhOc6RREcO8x9VM0PcHQak9Q3dWrqgfO0r6BulxZ_I5l-nHyMjkzz61heHWKAC8eGm7I_1lbpUXvSL_H3D8olPR69o1; glimpseId=hurtexinz@gmail.com; .AspNet.Correlation.Google=utQv7wzvycbS_j4rzmviUsbGhViLbKVQRj2ixTNAPXQ; .AspNet.Correlation.Facebook=QDRYTG0Bnk-rjJVtdSypnRw37dzbsYUBbMpz-o-ECIQ; .AspNet.ApplicationCookie=Tcn0s29OllEqMnSV6L8_CjCVoIHnQ0L-HNJuHe_Wvyes-_KKzcdFH6MlqvIt2V1gai5EOrR0V_hw39MSz5NvciYSxb_50URaRsJaqXIfqxi05XH1MYKfoseCds5-_8JvXnD-aU0eOhSCrE5Y0xdcTE3_wHnzOE9_2FRKUgvGQvYRojKMGAKOKlLO9VC5VtQ2gEluNnTSia7tNBgEEk_Ink0giC_zufSd3zwPidtwmAiMBSiEEumsrb6bXDQmnrHWZTikI6ln4t8rDhk35CW00tozjGCIBJp4N0L12jh4tpSKSFu2IicueIfStb8fU-bHUSyPdsvs34wbQ3UlIRf55trb9FsRo3BhKBJMBnRl9jTEBamzmBOm-JlKxsWF3EEF3AX1JUzGGSMd5D94foV5DArWwCRdOMO337RpgC3CncRVlWWJiZbBqK1bRtRxVQF6EXOTjgSWWY9buF9EaAtkOsnL6itArvBLMm0681rKrxFMbPNSFN9gf0h8AQWRSOJIM14zZCqCNRZffoTtilColQ&#xD;&#xA;Host: localhost:44300&#xD;&#xA;Referer: https://localhost:44300/Home/Contact&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64; rv:37.0) Gecko/20100101 Firefox/37.0&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/5/ROOT" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="C:\PZ\Inzynierka\v1.7\Hurtownia\Hurtownia\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="ApplicationCookie" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="admin@hurtownia.pl" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="*****" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="admin@hurtownia.pl" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="256" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="1024" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="CN=localhost" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="CN=localhost" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="50" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="application/x-www-form-urlencoded" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="on" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="256" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="1024" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="CN=localhost" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="CN=localhost" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="5" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/5" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/Home/Contact" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="C:\PZ\Inzynierka\v1.7\Hurtownia\Hurtownia\Home\Contact" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="32332" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="POST" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/Home/Contact" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="44300" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="1" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/8.0" />
+    </item>
+    <item name="URL">
+      <value string="/Home/Contact" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_CONTENT_LENGTH">
+      <value string="50" />
+    </item>
+    <item name="HTTP_CONTENT_TYPE">
+      <value string="application/x-www-form-urlencoded" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="pl,en-US;q=0.7,en;q=0.3" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="glimpsePolicy=On; glimpseOptions=%7B%22glimpsePolicy%22%3Anull%7D; ai_user=15C8CF29-40C5-4444-A523-CD3F4CBF2A95|2015-04-16T18:07:44.805Z; ai_session=985448BF-A4BA-4A05-9894-88B778D1A5E7|2015-04-16T18:07:44.810Z|2015-04-16T18:16:14.403Z; __RequestVerificationToken=zsJ7-eVG6fj6tdWf2BhOc6RREcO8x9VM0PcHQak9Q3dWrqgfO0r6BulxZ_I5l-nHyMjkzz61heHWKAC8eGm7I_1lbpUXvSL_H3D8olPR69o1; glimpseId=hurtexinz@gmail.com; .AspNet.Correlation.Google=utQv7wzvycbS_j4rzmviUsbGhViLbKVQRj2ixTNAPXQ; .AspNet.Correlation.Facebook=QDRYTG0Bnk-rjJVtdSypnRw37dzbsYUBbMpz-o-ECIQ; .AspNet.ApplicationCookie=Tcn0s29OllEqMnSV6L8_CjCVoIHnQ0L-HNJuHe_Wvyes-_KKzcdFH6MlqvIt2V1gai5EOrR0V_hw39MSz5NvciYSxb_50URaRsJaqXIfqxi05XH1MYKfoseCds5-_8JvXnD-aU0eOhSCrE5Y0xdcTE3_wHnzOE9_2FRKUgvGQvYRojKMGAKOKlLO9VC5VtQ2gEluNnTSia7tNBgEEk_Ink0giC_zufSd3zwPidtwmAiMBSiEEumsrb6bXDQmnrHWZTikI6ln4t8rDhk35CW00tozjGCIBJp4N0L12jh4tpSKSFu2IicueIfStb8fU-bHUSyPdsvs34wbQ3UlIRf55trb9FsRo3BhKBJMBnRl9jTEBamzmBOm-JlKxsWF3EEF3AX1JUzGGSMd5D94foV5DArWwCRdOMO337RpgC3CncRVlWWJiZbBqK1bRtRxVQF6EXOTjgSWWY9buF9EaAtkOsnL6itArvBLMm0681rKrxFMbPNSFN9gf0h8AQWRSOJIM14zZCqCNRZffoTtilColQ" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:44300" />
+    </item>
+    <item name="HTTP_REFERER">
+      <value string="https://localhost:44300/Home/Contact" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 6.3; WOW64; rv:37.0) Gecko/20100101 Firefox/37.0" />
+    </item>
+  </serverVariables>
+  <form>
+    <item name="Autor">
+      <value string="pablo" />
+    </item>
+    <item name="Email">
+      <value string="pks11@vp.pl" />
+    </item>
+    <item name="Topic">
+      <value string="sad" />
+    </item>
+    <item name="Text">
+      <value string="sda" />
+    </item>
+  </form>
+  <cookies>
+    <item name="glimpsePolicy">
+      <value string="On" />
+    </item>
+    <item name="glimpseOptions">
+      <value string="%7B%22glimpsePolicy%22%3Anull%7D" />
+    </item>
+    <item name="ai_user">
+      <value string="15C8CF29-40C5-4444-A523-CD3F4CBF2A95|2015-04-16T18:07:44.805Z" />
+    </item>
+    <item name="ai_session">
+      <value string="985448BF-A4BA-4A05-9894-88B778D1A5E7|2015-04-16T18:07:44.810Z|2015-04-16T18:16:14.403Z" />
+    </item>
+    <item name="__RequestVerificationToken">
+      <value string="zsJ7-eVG6fj6tdWf2BhOc6RREcO8x9VM0PcHQak9Q3dWrqgfO0r6BulxZ_I5l-nHyMjkzz61heHWKAC8eGm7I_1lbpUXvSL_H3D8olPR69o1" />
+    </item>
+    <item name="glimpseId">
+      <value string="hurtexinz@gmail.com" />
+    </item>
+    <item name=".AspNet.Correlation.Google">
+      <value string="utQv7wzvycbS_j4rzmviUsbGhViLbKVQRj2ixTNAPXQ" />
+    </item>
+    <item name=".AspNet.Correlation.Facebook">
+      <value string="QDRYTG0Bnk-rjJVtdSypnRw37dzbsYUBbMpz-o-ECIQ" />
+    </item>
+    <item name=".AspNet.ApplicationCookie">
+      <value string="Tcn0s29OllEqMnSV6L8_CjCVoIHnQ0L-HNJuHe_Wvyes-_KKzcdFH6MlqvIt2V1gai5EOrR0V_hw39MSz5NvciYSxb_50URaRsJaqXIfqxi05XH1MYKfoseCds5-_8JvXnD-aU0eOhSCrE5Y0xdcTE3_wHnzOE9_2FRKUgvGQvYRojKMGAKOKlLO9VC5VtQ2gEluNnTSia7tNBgEEk_Ink0giC_zufSd3zwPidtwmAiMBSiEEumsrb6bXDQmnrHWZTikI6ln4t8rDhk35CW00tozjGCIBJp4N0L12jh4tpSKSFu2IicueIfStb8fU-bHUSyPdsvs34wbQ3UlIRf55trb9FsRo3BhKBJMBnRl9jTEBamzmBOm-JlKxsWF3EEF3AX1JUzGGSMd5D94foV5DArWwCRdOMO337RpgC3CncRVlWWJiZbBqK1bRtRxVQF6EXOTjgSWWY9buF9EaAtkOsnL6itArvBLMm0681rKrxFMbPNSFN9gf0h8AQWRSOJIM14zZCqCNRZffoTtilColQ" />
+    </item>
+  </cookies>
+</error>

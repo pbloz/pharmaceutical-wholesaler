@@ -1,0 +1,176 @@
+﻿<error errorId="3731e7ea-f286-4ab2-acce-b7ca32215983" application="/LM/W3SVC/5/ROOT" host="LENOVO-PC" type="System.Web.HttpException" message="The controller for path '/Category' was not found or does not implement IController." source="System.Web.Mvc" detail="System.Web.HttpException (0x80004005): The controller for path '/Category' was not found or does not implement IController.&#xD;&#xA;   w System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)&#xD;&#xA;   w System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)&#xD;&#xA;   w Castle.Proxies.Invocations.IControllerFactory_CreateController.InvokeMethodOnTarget()&#xD;&#xA;   w Castle.DynamicProxy.AbstractInvocation.Proceed()&#xD;&#xA;   w Glimpse.Core.Extensibility.CastleInvocationToAlternateMethodContextAdapter.Proceed()&#xD;&#xA;   w Glimpse.Core.Extensions.AlternateMethodContextExtensions.TryProceedWithTimer(IAlternateMethodContext context, TimerResult&amp; timerResult)&#xD;&#xA;   w Glimpse.Core.Extensibility.AlternateMethod.NewImplementation(IAlternateMethodContext context)&#xD;&#xA;   w Glimpse.Core.Extensibility.AlternateTypeToCastleInterceptorAdapter.Intercept(IInvocation invocation)&#xD;&#xA;   w Castle.DynamicProxy.AbstractInvocation.Proceed()&#xD;&#xA;   w Castle.Proxies.IControllerFactoryProxy.CreateController(RequestContext requestContext, String controllerName)&#xD;&#xA;   w System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController&amp; controller, IControllerFactory&amp; factory)&#xD;&#xA;   w System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)&#xD;&#xA;   w System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)&#xD;&#xA;   w System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)&#xD;&#xA;   w System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()&#xD;&#xA;   w System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)" user="admin@hurtownia.pl" time="2015-10-08T18:52:18.8657348Z" statusCode="404">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_ACCEPT:text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate, sdch&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:pl-PL,pl;q=0.8,en-US;q=0.6,en;q=0.4&#xD;&#xA;HTTP_COOKIE:__RequestVerificationToken=DLtXyasBI0FaPCALYeYROch3tJJ-0-dvb-nNDrQOMTMK9qbgwYyS5VYw6_1_IHn3CopRa5s7TCfZ5VTMQ682Y7SDjKD7T6WNkuRHsdO6k-A1; ASP.NET_SessionId=yiby54kiurrzsrfb23klhefn; .AspNet.ApplicationCookie=trAYtwDfVQKG6Sd5ubvphYVilnQ6IWIj-QtyrD9eNCv_aWRwHrtUKgNeBA4tAYN4BmaIqC2MO3xMtdetHVIp-w69F1-F4A7hLm1LkpgcwTnsomxqkqqxbWQqCEOPE_Tw8XSH0gvendxyDABWNAVpB8RTmRAcTVPWOz-VG2Dn5hf9j8lYhl2sivHS9RMxfqHkWkMxoh9JhMW4PoOwYhmtXq3BwtgC_Er-0tOp8DS_qQlYsSPjffJpP1FmT2enAYi9i9Kx1FgShXr0lE_KyolGU54l9s2B3rMmkeP9pKAe_yKAToaXMCp5K_pRLqiJ685KcrPp-OHf8-svVY9OjDX2eMenIMvpqpGhsrHxpbpUvBWT3O3mdKNb3LLrqdEbVK7zG0aB8ozxwX_sEFcKubEbw5WqKQUknhIuYCBSh4Fr_hRaPQbIoHNHq-rwoL8k10WHqoKfJ61wS5gnqChqUZ-vKT8e3fEe2GJV3fM4LugPEsiByXw2-BlcxEp-tEdy9hgKPN-Agkvh9Qd80Lw0w2vQVg&#xD;&#xA;HTTP_HOST:localhost:44300&#xD;&#xA;HTTP_REFERER:https://localhost:44300/Categories/Index&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36&#xD;&#xA;HTTP_UPGRADE_INSECURE_REQUESTS:1&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Connection: keep-alive&#xD;&#xA;Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8&#xD;&#xA;Accept-Encoding: gzip, deflate, sdch&#xD;&#xA;Accept-Language: pl-PL,pl;q=0.8,en-US;q=0.6,en;q=0.4&#xD;&#xA;Cookie: __RequestVerificationToken=DLtXyasBI0FaPCALYeYROch3tJJ-0-dvb-nNDrQOMTMK9qbgwYyS5VYw6_1_IHn3CopRa5s7TCfZ5VTMQ682Y7SDjKD7T6WNkuRHsdO6k-A1; ASP.NET_SessionId=yiby54kiurrzsrfb23klhefn; .AspNet.ApplicationCookie=trAYtwDfVQKG6Sd5ubvphYVilnQ6IWIj-QtyrD9eNCv_aWRwHrtUKgNeBA4tAYN4BmaIqC2MO3xMtdetHVIp-w69F1-F4A7hLm1LkpgcwTnsomxqkqqxbWQqCEOPE_Tw8XSH0gvendxyDABWNAVpB8RTmRAcTVPWOz-VG2Dn5hf9j8lYhl2sivHS9RMxfqHkWkMxoh9JhMW4PoOwYhmtXq3BwtgC_Er-0tOp8DS_qQlYsSPjffJpP1FmT2enAYi9i9Kx1FgShXr0lE_KyolGU54l9s2B3rMmkeP9pKAe_yKAToaXMCp5K_pRLqiJ685KcrPp-OHf8-svVY9OjDX2eMenIMvpqpGhsrHxpbpUvBWT3O3mdKNb3LLrqdEbVK7zG0aB8ozxwX_sEFcKubEbw5WqKQUknhIuYCBSh4Fr_hRaPQbIoHNHq-rwoL8k10WHqoKfJ61wS5gnqChqUZ-vKT8e3fEe2GJV3fM4LugPEsiByXw2-BlcxEp-tEdy9hgKPN-Agkvh9Qd80Lw0w2vQVg&#xD;&#xA;Host: localhost:44300&#xD;&#xA;Referer: https://localhost:44300/Categories/Index&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36&#xD;&#xA;Upgrade-Insecure-Requests: 1&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/5/ROOT" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="C:\PZ\Inzynierka\v2.3\v1.7\Hurtownia\Hurtownia\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="ApplicationCookie" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="admin@hurtownia.pl" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="*****" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="admin@hurtownia.pl" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="128" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="1024" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="CN=localhost" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="CN=localhost" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="0" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="on" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="128" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="1024" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="CN=localhost" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="CN=localhost" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="5" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/5" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/Category" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="C:\PZ\Inzynierka\v2.3\v1.7\Hurtownia\Hurtownia\Category" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="SearchString=Witaminy" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="4409" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="GET" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/Category" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="44300" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="1" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/8.0" />
+    </item>
+    <item name="URL">
+      <value string="/Category" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate, sdch" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="pl-PL,pl;q=0.8,en-US;q=0.6,en;q=0.4" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="__RequestVerificationToken=DLtXyasBI0FaPCALYeYROch3tJJ-0-dvb-nNDrQOMTMK9qbgwYyS5VYw6_1_IHn3CopRa5s7TCfZ5VTMQ682Y7SDjKD7T6WNkuRHsdO6k-A1; ASP.NET_SessionId=yiby54kiurrzsrfb23klhefn; .AspNet.ApplicationCookie=trAYtwDfVQKG6Sd5ubvphYVilnQ6IWIj-QtyrD9eNCv_aWRwHrtUKgNeBA4tAYN4BmaIqC2MO3xMtdetHVIp-w69F1-F4A7hLm1LkpgcwTnsomxqkqqxbWQqCEOPE_Tw8XSH0gvendxyDABWNAVpB8RTmRAcTVPWOz-VG2Dn5hf9j8lYhl2sivHS9RMxfqHkWkMxoh9JhMW4PoOwYhmtXq3BwtgC_Er-0tOp8DS_qQlYsSPjffJpP1FmT2enAYi9i9Kx1FgShXr0lE_KyolGU54l9s2B3rMmkeP9pKAe_yKAToaXMCp5K_pRLqiJ685KcrPp-OHf8-svVY9OjDX2eMenIMvpqpGhsrHxpbpUvBWT3O3mdKNb3LLrqdEbVK7zG0aB8ozxwX_sEFcKubEbw5WqKQUknhIuYCBSh4Fr_hRaPQbIoHNHq-rwoL8k10WHqoKfJ61wS5gnqChqUZ-vKT8e3fEe2GJV3fM4LugPEsiByXw2-BlcxEp-tEdy9hgKPN-Agkvh9Qd80Lw0w2vQVg" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:44300" />
+    </item>
+    <item name="HTTP_REFERER">
+      <value string="https://localhost:44300/Categories/Index" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36" />
+    </item>
+    <item name="HTTP_UPGRADE_INSECURE_REQUESTS">
+      <value string="1" />
+    </item>
+  </serverVariables>
+  <queryString>
+    <item name="SearchString">
+      <value string="Witaminy" />
+    </item>
+  </queryString>
+  <cookies>
+    <item name="__RequestVerificationToken">
+      <value string="DLtXyasBI0FaPCALYeYROch3tJJ-0-dvb-nNDrQOMTMK9qbgwYyS5VYw6_1_IHn3CopRa5s7TCfZ5VTMQ682Y7SDjKD7T6WNkuRHsdO6k-A1" />
+    </item>
+    <item name="ASP.NET_SessionId">
+      <value string="yiby54kiurrzsrfb23klhefn" />
+    </item>
+    <item name=".AspNet.ApplicationCookie">
+      <value string="trAYtwDfVQKG6Sd5ubvphYVilnQ6IWIj-QtyrD9eNCv_aWRwHrtUKgNeBA4tAYN4BmaIqC2MO3xMtdetHVIp-w69F1-F4A7hLm1LkpgcwTnsomxqkqqxbWQqCEOPE_Tw8XSH0gvendxyDABWNAVpB8RTmRAcTVPWOz-VG2Dn5hf9j8lYhl2sivHS9RMxfqHkWkMxoh9JhMW4PoOwYhmtXq3BwtgC_Er-0tOp8DS_qQlYsSPjffJpP1FmT2enAYi9i9Kx1FgShXr0lE_KyolGU54l9s2B3rMmkeP9pKAe_yKAToaXMCp5K_pRLqiJ685KcrPp-OHf8-svVY9OjDX2eMenIMvpqpGhsrHxpbpUvBWT3O3mdKNb3LLrqdEbVK7zG0aB8ozxwX_sEFcKubEbw5WqKQUknhIuYCBSh4Fr_hRaPQbIoHNHq-rwoL8k10WHqoKfJ61wS5gnqChqUZ-vKT8e3fEe2GJV3fM4LugPEsiByXw2-BlcxEp-tEdy9hgKPN-Agkvh9Qd80Lw0w2vQVg" />
+    </item>
+  </cookies>
+</error>

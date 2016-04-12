@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <meta name="viewport" content="width=device-width" />
+    @*<link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" />
+
+    <link href="@Url.Content("~/Content/themes/base/jquery-ui.css")" rel="stylesheet" />*@
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <header>
+        @*<a id="cart-header-link" href="@Url.Action("Index", "Cart")">
+                AppFarm
+            </a>*@
+
+        <div style="overflow: hidden;">
+            
+
+            <a id="cart-header-link" href="@Url.Action("Index", "Cart")">
+
+                @*<span id="cart-header-logo">
+                    <img src="@Url.Content("~/Content/Images/logo.png")" class="left" />
+                </span>*@
+                
+
+                KOSZYK (<span style="color:white;" id="cart-header-items-count">@Html.Action("GetCartItemsCount", "Cart")</span>)
+                
+            </a>
+
+            @Html.Partial("_LoginPartial")
+
+
+        </div>
+        @*<a id="main-header-logo" href="@Url.Content("~/")">
+            <img src="@Url.Content("~/Content/Images/logo.png")" class="left" />
+            @*AppFarm*
+        </a>*@
+    </header>
+    <br/>
+    <div>
+
+
+        @RenderBody()
+    </div>
+    @*@Html.ActionLink("About","About","Home")*@
+    <footer >
+        <nav>
+            <ul>
+                <li><a href="@Url.Action("StaticContent", "Home", new { viewname = "Onas" })">O nas</a></li>
+                <li><a href="@Url.Action("StaticContent", "Home", new { viewname = "Contact" })">Kontakt</a></li>
+                <li><a href="@Url.Action("StaticContent", "Home", new { viewname = "Wysylka" })">Wysyłka</a></li>
+                <li><a href="@Url.Action("StaticContent", "Home", new { viewname = "Regulamin" })">Regulamin</a></li>
+                <li><a href="@Url.Action("About", "Home")">Porównaj</a></li>
+
+                <li><a href="@Url.Action("AskAboutProduct","Home")">Sprawdź dostępność leku</a></li>
+                @*<li><a href="@Url.Action("StaticContent", "Home", new { viewname = "About" })">About</a></li>*@
+
+            </ul>
+
+        </nav>
+
+    </footer>
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryui")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+    @RenderSection("ScriptsBottom", required: false)
+    @*@Scripts.Render("~/bundles/bootstrap")*@
+</body>
+</html>

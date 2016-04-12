@@ -1,0 +1,373 @@
+﻿@model Hurtownia.Models.Product
+@using Hurtownia.Infrastructure
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@Styles.Render("~/Content/css")
+<link href="@Url.Content("~/engine1/style.css")" rel="stylesheet" type="text/css" />
+<div id="productlist-content" @*style="body{margin-left:20px;}"*@>
+
+    @Html.Action("CategoriesMenu")
+
+    <div id="productlist-rightsection" style="margin-left:20px;">
+
+
+
+        <section id="product-details-section">
+            <br/>
+            @Html.Partial("_Logo")
+            <br/>
+            <div id="breadcrumb-section">
+                <img src="../Content/Images/home-small.png" />
+                @Html.MvcSiteMap().SiteMapPath()
+            </div>
+            <br />
+
+            <div id="product-details-left">
+                <br />
+
+
+                <img class="img-rounded" src="@Url.ProductCoverPath(Model.CoverFileName)" style="-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.47);-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.47); box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.47);" />
+
+                <div id="product-details-left">
+                  
+                </div>
+            </div>
+
+
+
+            <div id="product-details-right">
+                @*<div id="product-details-names" style="-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.47);-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.47); box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.47);">*@
+                <br />
+
+                <h1 style="font-size: 1.273em;font-weight: bold;color: #454B4C;margin-bottom: 10px;">
+                    @Model.ProductName (data ważności: @String.Format("{0:dd/MM/yyyy}", Model.DateEnd))
+                    @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+                    {
+                        <a href="@Url.Action("AddProduct", "Manage", new { productId = Model.ProductId })" style="margin-top: 20px; font-weight: bold; display: block;">Edytuj</a>
+                    }
+
+                </h1>
+
+
+
+
+                <div id="product-details-price">
+                    @*<div style="margin-bottom:10px;">
+                            @String.Format("{00:00.##}", Model.ProductPrice)<span>PLN</span>
+                        </div>*@
+
+                        <span><b style="color:red;font-size:18px">Cena: @String.Format("{00:00.##}", Model.ProductPrice) PLN </b> </span>
+                   
+
+
+                    @if (Model.MaxQuantity != 0)
+                    {
+                        using (Html.BeginForm("AddToCart2", "Cart", new { id = Model.ProductId }))
+                        {
+                            <fieldset>
+
+                                <br />
+
+                                @Html.HiddenFor(model => model.ProductId)
+
+                                @*<div id="product-details-price">
+                                        @Html.Label("Ilość:")
+                                        @Html.TextBox("Quantity")
+                                        @Html.ValidationSummary(true)
+                                        @Html.ValidationMessageFor(model => model.MaxQuantity, "", new { @class = "text-danger" })
+                                    </div>*@
+                                <input name="Quantity" type="number" min="0" max="@Model.MaxQuantity" class="form-control col-sm-2 col-lg-2" style="width:300px;" placeholder="Wprowadź ilość" />
+                                @*<br />*@
+                                <p>
+                                    <input type="submit" value="Kup" class="btn btn-info" style="margin-left:5px; margin-bottom: 20px;font-weight: bold;text-align: center;background-color: #585858; color: white; font-size: 17px;width:100px;" />
+                                </p>
+                                <div>
+                                    <div>
+                                        <span style="font-size:18px;">
+                                            Dostępne : @Model.MaxQuantity
+                                        </span>
+                                    </div>
+                                </div>
+
+
+                            </fieldset>
+                        }
+                    }
+
+
+
+
+                    @*<a href="@Url.Action("AddToCart", "Cart", new { id=Model.ProductId})"></a>*@
+                        @*<a href="@Url.Action("AddToCompare1", "Cart", new { id=Model.ProductId})"></a>*@
+                        @*<a class="compareProduct" data-id="@Model.ProductId" href="#">Porownaj</a>*@
+
+
+
+
+                    </div>
+
+                    <br />
+
+
+                    @*<a href="@Url.Action("AddToCompare1", "Cart", new { productId = Model.ProductId })">aaa</a>*@
+
+                    @* <a href="@Url.Action("AddToCompare1", "Cart", new { productId=Model.ProductId})">bbbbbbb</a>*@
+                    @*<a class="compareProduct" data-id="@Model.ProductId" href="https://localhost:44300/Cart/AddToCompare1?productId=@Model.ProductId">Porownaj</a>*@
+                    @*<a class="compareProduct" data-id="@Model.ProductId" href="@Url.Action("AddToCompare1", "Cart", new { productId = @Model.ProductId })">Porownaj</a>*@
+                    <a class="removeProduct" data-id="@Model.ProductId" href="@Url.Action("AddToCompare1", "Cart", new { productId = @Model.ProductId })" style="margin-top: 20px; margin-bottom: 20px;font-weight: bold;text-align: center;background-color: #585858; color: white; font-size: 24px;">
+                        <img src="../Content/Images/compare.png" />
+                    </a>
+                    <br />
+
+
+                    @* <span class="showProduct" style="display:none;  margin-bottom: 20px;font-weight: bold; text-align: center;background-color: #00FF00; color: white; font-size: 24px;">Dodano</span>*@
+
+
+                    <a class="showProduct" data-id="@Model.ProductId" href="@Url.Action("RemoveFromCompare", "Cart", new { productId = @Model.ProductId })" style="display:none; margin-top: 20px; margin-bottom: 20px;font-weight: bold;text-align: center;background-color: #00FF00; color: white; font-size: 24px;">Usun z Porównywarki</a>
+
+
+
+                    @* <div style="height: 0px;width: 0px"><a href="https://localhost:44300/Cart/Compare1" class="showProduct">Porównywarka</a></div>*@
+                <br />
+                    <br />
+                    <span class="showTip" style="display:none;  margin-bottom: 20px;font-weight: bold; text-align: center; background:yellow; color: white; font-size: 20px;">Dodano do <a href="https://localhost:44300/Cart/Compare">Porównywarki</a> </span>
+
+                    <div id="product-details-info">
+                        Bezpłatna przesyłka. Czas realizacji 24h
+                    </div>
+                    <br />
+                    <h1><b style="color:red;font-size:18px;">Szczegóły:</b></h1>
+                    <div id="product-details-description">
+                        @Model.ProductDescription
+                    </div>
+                    <h1><b style="color:red;font-size:18px;">Skład:</b></h1>
+                    <div id="product-details-description">
+                        @Model.Components
+                    </div>
+                    <h1><b style="color:red;font-size:18px;">Przeciwwskazania:</b></h1>
+                    <div id="product-details-description">
+                        @Model.Contraindications
+                    </div>
+                    <h1><b style="color:red;font-size:18px;">Producent:</b></h1><br/>
+                    @*<div id="product-details-description">
+                            @Model.Manufacture
+                        </div>*@
+
+                    @{
+                        Hurtownia.DAL.StoreContext dbo = new Hurtownia.DAL.StoreContext();
+                        foreach (var item in dbo.Manufactures.Where(m => m.ManufactureId == Model.ManufactureId))
+                        {
+                            <span>@item.Name</span><br />
+                            <span>@item.Address</span><br />
+                            <span>@item.CodeAndCity</span><br />
+                            @*<span>Nip:@item.Nip</span><br/>*@
+                            <span>Tel: @item.PhoneNumber</span><br />
+
+                        }
+                    }
+
+                    @*<div id="Temp-@Model.ProductId">temp - @Model.ProductId</div> <br />*@
+
+
+                    @if (User.Identity.IsAuthenticated)
+                    {
+
+
+                        <br />
+
+                        <div style="margin-top: 20px;background-color:#6c91ea; margin-bottom: 20px;font-weight: bold; display: block;text-align: center;color: white; font-size: 36px;">
+                            Poleć produkt :
+                        </div>
+
+
+                        using (Html.BeginForm("Refer", "Store", new { id = Model.ProductId }))
+                        {
+                            <fieldset>
+
+                                <br />
+
+                                @Html.HiddenFor(model => model.ProductId)
+
+                                @*<div>
+                                    <p>
+                                        @Html.Label("Autor")
+                                    </p>
+                                    <p>
+                                        @Html.TextBox("Autor", null, new { Class = "form-control" })
+                                    </p>
+                                </div>
+                                <br />*@
+
+                                <div>
+                                    <p>
+                                        @Html.Label("Email Odbiorcy")
+                                    </p>
+                                    <p>
+
+                                        @Html.TextBox("EmailReceiver", null, new { Class = "form-control", Styles = "height:40px;" })
+                                    </p>
+                                </div>
+                                <br />
+
+                                <div>
+                                    @Html.Label("Wpisz wiadomosc:")
+                                    <p style="display:block">@Html.TextArea("Text", new { Class = "form-control" })</p>
+
+                                </div>
+                                <br />
+                                <p>
+                                    <input type="submit" value="Wyślij" class="btn btn-info" style="margin-top: 20px; font-weight: bold; display: block;" />
+                                </p>
+                            </fieldset>
+                        }
+
+                        
+                        
+                    <br />
+                      <div style="margin-top: 20px;background-color:#6c91ea; margin-bottom: 20px;font-weight: bold; display: block;text-align: center;color: white; font-size: 36px;">
+                            Komentarze:
+                        </div>
+                    <div style="background-color:white">
+                        @if (Model.CategoryId != null)
+                        {
+                            Hurtownia.DAL.StoreContext db = new Hurtownia.DAL.StoreContext();
+                            if (db.Comments.Any(p => p.ProductComId == Model.ProductId))
+                            {
+                                foreach (var item in db.Comments.Where(p => p.ProductComId == Model.ProductId))
+                                {
+                                    
+                                    <span><b style="color:blue;">@item.UserName napisał:</b></span><br/>
+                                    <span>@item.Description</span><br/>
+
+                                }
+                            }
+                            else
+                            {
+                                <span>Brak komentarzy!</span>
+
+
+                            }
+                        }
+                    </div>
+                        
+                        
+                        <div style="margin-top: 20px;background-color:#6c91ea; margin-bottom: 20px;font-weight: bold; display: block;text-align: center;color: white; font-size: 36px;">
+                            Dodaj komentarz :
+                        </div>
+                        using (Html.BeginForm("Comment", "Store", new { id = Model.ProductId }))
+                        {
+                            <fieldset>
+
+                                <br />
+
+                                @Html.HiddenFor(model => model.ProductId)
+
+                                <div>
+                                    @Html.Label("Treść komentarza:")
+                                    <p style="display:block">@Html.TextArea("Text", new { Class = "form-control" })</p>
+
+                                </div>
+                                <br />
+                                <p>
+                                    <input type="submit" value="Dodaj" class="btn btn-info" style="margin-top: 20px; font-weight: bold; display: block;" />
+                                </p>
+                            </fieldset>
+                        }
+                    }
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </div>
+
+    @section ScriptsBottom{
+        @System.Web.Optimization.Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        <script src="~/Scripts/jquery-1.10.2.js"></script>
+        <script type="text/javascript">
+
+            $(function () {
+                $(".removeProduct").click(function () {
+                    //pobieramy id produktu do usuniecia
+                    var recordToDelete = $(this).attr("data-id");
+
+                    if (recordToDelete != '') {
+
+                        // Send post request with AJAX
+                        $.post("/Cart/AddToCompare1", { "productId": recordToDelete },
+                            function (response) {
+                                // Success
+                                if (response.RemovedItemCount == 0) {
+
+                                    $('#cart-row-' + response.RemoveItemId).fadeOut('slow', function () {
+                                        if (response.CartItemsCount == 0) {
+                                            $("#cart-empty-message").removeClass("hidden");
+                                        }
+                                    });
+                                } else {
+                                    $('#cart-item-count-' + response.RemoveItemId).text(response.RemovedItemCount);
+                                }
+                                //$('.removeProduct').remove();
+
+                                //$('.showProduct').show();
+
+                                $('.removeProduct').hide();
+                                $('.showProduct').show();
+                                // $('.space').show();
+                                $('.showTip').show();
+                                // $('.showProduct').show();
+                                // $('.removeProduct').text('eloeol');
+                                //if ($('.removeProduct').valueOf($('.removeProduct').remove())) {
+                                //    $('.removeProduct').html('<div style="margin-top: 20px; margin-bottom: 20px;font-weight: bold; display: block;text-align: center;background-color: #00FF00; color: white; font-size: 24px;">Dodano </div><br><a href="https://localhost:44300/Cart/Compare">Porównywarka</a>');
+
+                                //}
+                            });
+
+                        return false;
+                    }
+                });
+
+            });
+
+            $(function () {
+                $(".showProduct").click(function () {
+                    //pobieramy id produktu do usuniecia
+                    var recordToDelete = $(this).attr("data-id");
+
+                    if (recordToDelete != '') {
+
+                        // Send post request with AJAX
+                        $.post("/Cart/RemoveFromCompare", { "productId": recordToDelete },
+                            function (response) {
+                                // Success
+                                if (response.RemovedItemCount == 0) {
+
+                                    $('#cart-row-' + response.RemoveItemId).fadeOut('slow', function () {
+                                        if (response.CartItemsCount == 0) {
+                                            $("#cart-empty-message").removeClass("hidden");
+                                        }
+                                    });
+                                } else {
+                                    $('#cart-item-count-' + response.RemoveItemId).text(response.RemovedItemCount);
+                                }
+                                $('.removeProduct').show();
+                                $('.showProduct').hide();
+                                // $('.space').show();
+                                $('.showTip').hide();
+
+
+                            });
+
+                        return false;
+                    }
+                });
+
+            });
+
+        </script>
+    }

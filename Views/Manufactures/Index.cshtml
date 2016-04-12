@@ -1,0 +1,62 @@
+﻿@model IEnumerable<Hurtownia.Models.Manufacture>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/ManageLayout.cshtml";
+}
+
+<br />
+<br/>
+<h1 ><b style="color:red;font-size:18px;">Lista wszystkich producentów</b></h1>
+<br />
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CodeAndCity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nip)
+        </th>
+        <th>Akcja</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodeAndCity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PhoneNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nip)
+        </td>
+        <td>
+            @Html.ActionLink("Edycja", "Edit", new { id=item.ManufactureId }) |
+            @Html.ActionLink("Szczegóły", "Details", new { id=item.ManufactureId }) |
+            @Html.ActionLink("Usuń", "Delete", new { id=item.ManufactureId })
+        </td>
+    </tr>
+}
+
+</table>
+<br/>
+<p>
+    @Html.ActionLink("Dodaj nowego producenta", "Create")
+</p>

@@ -1,0 +1,47 @@
+﻿@model Hurtownia.ViewModels.ReferToFriendHelper
+
+@{
+    ViewBag.Title = "ReferToFriend";
+}
+
+<div class="referGlowna">
+    <h1>Poleć przedmiot </h1>
+
+    <h2> Wybrałeś do polecenia: <span style="color:#3366FF">@Model.Product.ProductName</span></h2>
+
+    <h4>
+        Znajdujesz się w formularzu polecania przedmiotu. Wypełnij poniższe pola po czym system wyśle wiadomość e-mail
+        na wskazany przez Ciebie adres wraz z informacjami.
+    </h4>
+    <h4>Aby dowiedzieć się więcej na temat tej opcji zajrzyj do naszego @Html.ActionLink("FAQ", "FaQ", "HomePage")</h4>
+
+    @using (Html.BeginForm("sendEmailToFriend", "Product", new { id = Model.Product.ProductId }))
+    {
+        <fieldset>
+            <legend>Formularz</legend>
+
+            @Html.HiddenFor(model => model.Product.ProductId)
+
+            <div class="editor-label">
+                @Html.Label("Autor")
+                @Html.TextBox("Autor")
+            </div>
+
+            <div class="editor-label">
+                @Html.Label("Email Odbiorcy")
+                @Html.TextBox("EmailReceiver")
+            </div>
+
+            <div class="editor-label">
+                @Html.Label("Wpisz wiadomosc:")
+                <p>@Html.TextArea("Text")</p>
+
+            </div>
+
+            <p>
+                <input type="submit" value="Wyślij" />
+            </p>
+        </fieldset>
+    }
+
+</div>

@@ -1,0 +1,298 @@
+﻿<error errorId="57608675-c7e0-4c66-993c-bc92cf535611" application="/LM/W3SVC/2/ROOT" host="KOMPPAWŁA" type="System.ArgumentOutOfRangeException" message="Indeks był spoza zakresu. Musi mieć wartość nieujemną i mniejszą niż rozmiar kolekcji.&#xD;&#xA;Nazwa parametru: index" source="mscorlib" detail="System.ArgumentOutOfRangeException: Indeks był spoza zakresu. Musi mieć wartość nieujemną i mniejszą niż rozmiar kolekcji.&#xD;&#xA;Nazwa parametru: index&#xD;&#xA;   w System.ThrowHelper.ThrowArgumentOutOfRangeException()&#xD;&#xA;   w System.Collections.Generic.List`1.get_Item(Int32 index)&#xD;&#xA;   w System.Linq.Enumerable.ElementAt[TSource](IEnumerable`1 source, Int32 index)&#xD;&#xA;   w Hurtownia.Controllers.ProductsController.AddProductsQuantity(FormCollection data)&#xD;&#xA;   w lambda_method(Closure , ControllerBase , Object[] )&#xD;&#xA;   w System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)&#xD;&#xA;   w System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)&#xD;&#xA;   w System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncControllerActionInvoker.ActionInvocation.InvokeSynchronousActionMethod()&#xD;&#xA;   w System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;BeginInvokeSynchronousActionMethod&gt;b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.&lt;InvokeActionMethodFilterAsynchronouslyRecursive&gt;b__3f()&#xD;&#xA;   w System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.&lt;&gt;c__DisplayClass48.&lt;InvokeActionMethodFilterAsynchronouslyRecursive&gt;b__41()&#xD;&#xA;   w System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass33.&lt;BeginInvokeActionMethodWithFilters&gt;b__32(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass21.&lt;&gt;c__DisplayClass2b.&lt;BeginInvokeAction&gt;b__1c()&#xD;&#xA;   w System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass21.&lt;BeginInvokeAction&gt;b__1e(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.Controller.&lt;BeginExecuteCore&gt;b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)&#xD;&#xA;   w System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.Controller.&lt;BeginExecute&gt;b__15(IAsyncResult asyncResult, Controller controller)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)&#xD;&#xA;   w System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.MvcHandler.&lt;BeginProcessRequest&gt;b__5(IAsyncResult asyncResult, ProcessRequestState innerState)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)&#xD;&#xA;   w System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)&#xD;&#xA;   w System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()&#xD;&#xA;   w System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)" user="admin@hurtownia.pl" time="2015-11-02T12:04:46.0352180Z">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CACHE_CONTROL:max-age=0&#xD;&#xA;HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_CONTENT_LENGTH:2838&#xD;&#xA;HTTP_CONTENT_TYPE:application/x-www-form-urlencoded&#xD;&#xA;HTTP_ACCEPT:text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:pl-PL,pl;q=0.8,en-US;q=0.6,en;q=0.4&#xD;&#xA;HTTP_COOKIE:__RequestVerificationToken=oJUwcpCYZuOnovuRu784xC-MA0tFF4ogCONxtbcLoOimyGAQUN0v8DQuzQ_Qwj-Ixz-3eax5tX8se-aBWI93cbnxESb2t6myxwltg6GOy5M1; .AspNet.ApplicationCookie=0xZ0THEX-4FUByUFjLEOtiL61zsmwf1A3kRUBwZYhDcNyEbTk_J81H6Ur94jC29RJj0iNJO8ftY07uRoqwRyhCBMZ-YbK6VChZiXh02hmNh_WK0-oiVQ-YaoCCHbJy2foQ01aep31ZWBnbXExe1aAmyIMVbIdOlfwvK0lazGiGEbycLPL_IAenUllLkPAlU8kdgUAb1ZbUrN3U-32DjVFOBuRtvIyaXBv-uDLRd-mVHP_uDSm0kqbjyqsV2hmSNK24BxqgyBu8yQbUpqlYUP5QLIcWDk42c_QgdUMxtXqs7VUipdN-VA06GBI8DJtStpJLJnCf4hH9aVXpPPa_6P8eXdTClVOSbTbb3ylX1yQoKi9p_JrBgWwlrHfLQLR7IuXHXw9b9xUxfHUfU6rNwJZVCCzDR4r7tbnhb3jJBsZbybdCWu7PI-mb17up4am3vpT3oeLN-zGuHsdAhVnd36kEnV_-gertjgWVFbb4p4LIzifDls-nghGUygS3RM1iZYu_Dy_Kns4nOHQXPDQiIsmQ&#xD;&#xA;HTTP_HOST:localhost:44300&#xD;&#xA;HTTP_REFERER:https://localhost:44300/Manage/ProductsDeficit&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36&#xD;&#xA;HTTP_ORIGIN:https://localhost:44300&#xD;&#xA;HTTP_UPGRADE_INSECURE_REQUESTS:1&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Cache-Control: max-age=0&#xD;&#xA;Connection: keep-alive&#xD;&#xA;Content-Length: 2838&#xD;&#xA;Content-Type: application/x-www-form-urlencoded&#xD;&#xA;Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8&#xD;&#xA;Accept-Encoding: gzip, deflate&#xD;&#xA;Accept-Language: pl-PL,pl;q=0.8,en-US;q=0.6,en;q=0.4&#xD;&#xA;Cookie: __RequestVerificationToken=oJUwcpCYZuOnovuRu784xC-MA0tFF4ogCONxtbcLoOimyGAQUN0v8DQuzQ_Qwj-Ixz-3eax5tX8se-aBWI93cbnxESb2t6myxwltg6GOy5M1; .AspNet.ApplicationCookie=0xZ0THEX-4FUByUFjLEOtiL61zsmwf1A3kRUBwZYhDcNyEbTk_J81H6Ur94jC29RJj0iNJO8ftY07uRoqwRyhCBMZ-YbK6VChZiXh02hmNh_WK0-oiVQ-YaoCCHbJy2foQ01aep31ZWBnbXExe1aAmyIMVbIdOlfwvK0lazGiGEbycLPL_IAenUllLkPAlU8kdgUAb1ZbUrN3U-32DjVFOBuRtvIyaXBv-uDLRd-mVHP_uDSm0kqbjyqsV2hmSNK24BxqgyBu8yQbUpqlYUP5QLIcWDk42c_QgdUMxtXqs7VUipdN-VA06GBI8DJtStpJLJnCf4hH9aVXpPPa_6P8eXdTClVOSbTbb3ylX1yQoKi9p_JrBgWwlrHfLQLR7IuXHXw9b9xUxfHUfU6rNwJZVCCzDR4r7tbnhb3jJBsZbybdCWu7PI-mb17up4am3vpT3oeLN-zGuHsdAhVnd36kEnV_-gertjgWVFbb4p4LIzifDls-nghGUygS3RM1iZYu_Dy_Kns4nOHQXPDQiIsmQ&#xD;&#xA;Host: localhost:44300&#xD;&#xA;Referer: https://localhost:44300/Manage/ProductsDeficit&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36&#xD;&#xA;Origin: https://localhost:44300&#xD;&#xA;Upgrade-Insecure-Requests: 1&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/2/ROOT" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="C:\v2.8\v1.7\Hurtownia\Hurtownia\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="ApplicationCookie" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="admin@hurtownia.pl" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="*****" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="admin@hurtownia.pl" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="256" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="1024" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="CN=localhost" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="CN=localhost" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="2838" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="application/x-www-form-urlencoded" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="on" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="256" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="1024" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="CN=localhost" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="CN=localhost" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="2" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/2" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/Products/AddProductsQuantity" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="C:\v2.8\v1.7\Hurtownia\Hurtownia\Products\AddProductsQuantity" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="24249" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="POST" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/Products/AddProductsQuantity" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="44300" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="1" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/8.0" />
+    </item>
+    <item name="URL">
+      <value string="/Products/AddProductsQuantity" />
+    </item>
+    <item name="HTTP_CACHE_CONTROL">
+      <value string="max-age=0" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_CONTENT_LENGTH">
+      <value string="2838" />
+    </item>
+    <item name="HTTP_CONTENT_TYPE">
+      <value string="application/x-www-form-urlencoded" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="pl-PL,pl;q=0.8,en-US;q=0.6,en;q=0.4" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="__RequestVerificationToken=oJUwcpCYZuOnovuRu784xC-MA0tFF4ogCONxtbcLoOimyGAQUN0v8DQuzQ_Qwj-Ixz-3eax5tX8se-aBWI93cbnxESb2t6myxwltg6GOy5M1; .AspNet.ApplicationCookie=0xZ0THEX-4FUByUFjLEOtiL61zsmwf1A3kRUBwZYhDcNyEbTk_J81H6Ur94jC29RJj0iNJO8ftY07uRoqwRyhCBMZ-YbK6VChZiXh02hmNh_WK0-oiVQ-YaoCCHbJy2foQ01aep31ZWBnbXExe1aAmyIMVbIdOlfwvK0lazGiGEbycLPL_IAenUllLkPAlU8kdgUAb1ZbUrN3U-32DjVFOBuRtvIyaXBv-uDLRd-mVHP_uDSm0kqbjyqsV2hmSNK24BxqgyBu8yQbUpqlYUP5QLIcWDk42c_QgdUMxtXqs7VUipdN-VA06GBI8DJtStpJLJnCf4hH9aVXpPPa_6P8eXdTClVOSbTbb3ylX1yQoKi9p_JrBgWwlrHfLQLR7IuXHXw9b9xUxfHUfU6rNwJZVCCzDR4r7tbnhb3jJBsZbybdCWu7PI-mb17up4am3vpT3oeLN-zGuHsdAhVnd36kEnV_-gertjgWVFbb4p4LIzifDls-nghGUygS3RM1iZYu_Dy_Kns4nOHQXPDQiIsmQ" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:44300" />
+    </item>
+    <item name="HTTP_REFERER">
+      <value string="https://localhost:44300/Manage/ProductsDeficit" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36" />
+    </item>
+    <item name="HTTP_ORIGIN">
+      <value string="https://localhost:44300" />
+    </item>
+    <item name="HTTP_UPGRADE_INSECURE_REQUESTS">
+      <value string="1" />
+    </item>
+  </serverVariables>
+  <form>
+    <item name="item.ProductName">
+      <value string="Reliver x 10 kaps" />
+      <value string="FullRutin x 90 tabl" />
+      <value string="LactiBiotic x 10 kaps" />
+      <value string="MagnesiveB6 x 50 tabl" />
+      <value string="Melissive x 20 kaps" />
+      <value string="Żuramix x 10 tabl" />
+      <value string="BodyFit x 60 tabl" />
+      <value string="HydroFit x 10 tabl" />
+      <value string="FlexiProtect x 60 kaps" />
+      <value string="Hesperydynin x 120 kaps" />
+      <value string="Acenol 100 mg x 20 tabl" />
+      <value string="Activ krill x 10 kaps (ICN)" />
+      <value string="Bioliq 25+ krem nawilżający pod oczy 15 ml" />
+      <value string="Gelacet plus x 21 sasz" />
+      <value string="Benzacne 10% żel 10 g" />
+      <value string="Elancyl cellu slim krem na cellulit 200 ml" />
+      <value string="Ubichinol koenzym q10 x 60 kaps" />
+      <value string="Hesperydynin x 60 kaps" />
+      <value string="Mosquiterum spray 50 ml" />
+      <value string="Reliver x 60 kaps" />
+      <value string="Reliver x 100 kaps" />
+      <value string="Acenol 100 mg x 50 tabl" />
+      <value string="Acenol 100 mg x 100 tabl" />
+      <value string="Acenol 100 mg x 150 tabl" />
+      <value string="Hesperydynin x 20 kaps" />
+      <value string="Hesperydynin x 90 kaps" />
+      <value string="Hesperydynin x 90 kaps" />
+    </item>
+    <item name="item.ProductPrice">
+      <value string="16,59" />
+      <value string="16,59" />
+      <value string="7,85" />
+      <value string="10,98" />
+      <value string="13,58" />
+      <value string="16,54" />
+      <value string="12,98" />
+      <value string="21,54" />
+      <value string="14,32" />
+      <value string="200,11" />
+      <value string="29,32" />
+      <value string="14,32" />
+      <value string="21,14" />
+      <value string="11,32" />
+      <value string="33,12" />
+      <value string="89,12" />
+      <value string="14,34" />
+      <value string="96,75" />
+      <value string="10,00" />
+      <value string="33,11" />
+      <value string="42,01" />
+      <value string="32,32" />
+      <value string="46,04" />
+      <value string="78,21" />
+      <value string="48,00" />
+      <value string="150,75" />
+      <value string="150,75" />
+    </item>
+    <item name="item.MaxQuantity">
+      <value string="100" />
+      <value string="100" />
+      <value string="100" />
+      <value string="100" />
+      <value string="100" />
+      <value string="100" />
+      <value string="100" />
+      <value string="100" />
+      <value string="100" />
+      <value string="765" />
+      <value string="100" />
+      <value string="100" />
+      <value string="100" />
+      <value string="320" />
+      <value string="110" />
+      <value string="90" />
+      <value string="876" />
+      <value string="765" />
+      <value string="800" />
+      <value string="211" />
+      <value string="423" />
+      <value string="310" />
+      <value string="900" />
+      <value string="932" />
+      <value string="765" />
+      <value string="765" />
+      <value string="765" />
+    </item>
+    <item name="item.Quantity">
+      <value string="101" />
+      <value string="101" />
+      <value string="0" />
+      <value string="0" />
+      <value string="0" />
+      <value string="0" />
+      <value string="0" />
+      <value string="0" />
+      <value string="0" />
+      <value string="0" />
+      <value string="0" />
+      <value string="0" />
+      <value string="0" />
+      <value string="0" />
+      <value string="0" />
+      <value string="0" />
+      <value string="0" />
+      <value string="0" />
+      <value string="0" />
+      <value string="0" />
+      <value string="0" />
+      <value string="0" />
+      <value string="0" />
+      <value string="0" />
+      <value string="0" />
+      <value string="0" />
+      <value string="0" />
+    </item>
+  </form>
+  <cookies>
+    <item name="__RequestVerificationToken">
+      <value string="oJUwcpCYZuOnovuRu784xC-MA0tFF4ogCONxtbcLoOimyGAQUN0v8DQuzQ_Qwj-Ixz-3eax5tX8se-aBWI93cbnxESb2t6myxwltg6GOy5M1" />
+    </item>
+    <item name=".AspNet.ApplicationCookie">
+      <value string="0xZ0THEX-4FUByUFjLEOtiL61zsmwf1A3kRUBwZYhDcNyEbTk_J81H6Ur94jC29RJj0iNJO8ftY07uRoqwRyhCBMZ-YbK6VChZiXh02hmNh_WK0-oiVQ-YaoCCHbJy2foQ01aep31ZWBnbXExe1aAmyIMVbIdOlfwvK0lazGiGEbycLPL_IAenUllLkPAlU8kdgUAb1ZbUrN3U-32DjVFOBuRtvIyaXBv-uDLRd-mVHP_uDSm0kqbjyqsV2hmSNK24BxqgyBu8yQbUpqlYUP5QLIcWDk42c_QgdUMxtXqs7VUipdN-VA06GBI8DJtStpJLJnCf4hH9aVXpPPa_6P8eXdTClVOSbTbb3ylX1yQoKi9p_JrBgWwlrHfLQLR7IuXHXw9b9xUxfHUfU6rNwJZVCCzDR4r7tbnhb3jJBsZbybdCWu7PI-mb17up4am3vpT3oeLN-zGuHsdAhVnd36kEnV_-gertjgWVFbb4p4LIzifDls-nghGUygS3RM1iZYu_Dy_Kns4nOHQXPDQiIsmQ" />
+    </item>
+  </cookies>
+</error>

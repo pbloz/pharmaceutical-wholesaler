@@ -1,0 +1,89 @@
+﻿@model IEnumerable<Hurtownia.Models.Product>
+@using Hurtownia.Infrastructure
+
+@{
+    Layout = "~/Views/Shared/ManageLayout.cshtml";
+}
+<br />
+<br />
+<h1><b style="color:red;font-size:18px;">Formularz zwiększania ilości produktów</b></h1>
+<br />
+
+@using (Html.BeginForm("EditionAllProductsQuantity", "Products"))
+{
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped table-striped-column">
+
+
+            <tr class="table tbody tr > td.info">
+                <th>
+                    Nazwa
+                </th>
+
+                <th>
+                    Kategoria
+                </th>
+
+
+
+                <th>data ważności</th>
+                <th>cena</th>
+                <th>ilość</th>
+                <th>Zwiększ ilość</th>
+
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+           
+                    <td>
+                        @*@Html.DisplayFor(modelItem => item.ProductName)*@
+                        @*<input type="text" class="form-control col-md-1" @*style="max-width:150px" min="0" value="@item.ProductName" name="Name">*@
+                        @Html.DisplayFor(modelItem => item.ProductName)
+
+
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Category.NameCategory)
+                    </td>
+
+                    <td>
+                        @String.Format("{0:dd/MM/yyyy}", item.DateEnd)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ProductPrice)
+
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MaxQuantity)
+                    </td>
+                    <td>
+                        @*@Html.HiddenFor(modelItem =>item.ProductId)*@
+
+                        @*<input type="text" style="max-width:50px" name="@item.Quantity" value="@item.MaxQuantity">*@
+                        @*<input type="number" style="max-width:50px"  min="0" value="@item.MaxQuantity" @ViewData["Quantity"]>*@
+
+                        <input type="number" style="max-width:50px" min="0" value="@item.Quantity" name="Quantity">
+
+
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+    <br/>
+    <br/>
+    
+    <input class="btn btn-info" style="max-width:120px;margin-right:0px;" type="submit" value="Zapisz zmiany" />
+
+}
+<br />
+<br />
+
+<script type="text/javascript" src="engine1/wowslider.js"></script>
+<script type="text/javascript" src="engine1/jquery.js"></script>
+<script type="text/javascript" src="engine1/wowslider.mod.js"></script>
+<script type="text/javascript" src="engine1/script.js"></script>
+@System.Web.Optimization.Scripts.Render("~/bundles/jquery")

@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "AskAboutProduct";
+    Layout = "~/Views/Shared/ManageLayout.cshtml";
+}
+<br />
+<br />
+<div style="margin-top: 20px;background-color:#6c91ea; margin-bottom: 20px;font-weight: bold; display: block;text-align: center;color: white; font-size: 36px;">
+    Nie znalazłeś produktu? Zapytaj o jego dostępność
+</div>
+
+
+@using (Html.BeginForm("AskAboutProduct", "Home"))
+{
+    <fieldset>
+
+        <br />
+
+
+        <div>
+            <p>
+                @Html.Label("Twoj adres e-mail")
+            </p>
+            <p>
+
+                @Html.TextBox("EmailReceiver", null, new { Class = "form-control", Styles = "height:40px;" })
+            </p>
+        </div>
+        <br />
+
+        <div>
+            @Html.Label("Podaj nazwę leku:")
+            <p style="display:block">@Html.TextArea("Text", new { Class = "form-control" })</p>
+
+        </div>
+        <br />
+        <p>
+            <input type="submit" value="Wyślij zapytanie" class="btn btn-info" style="margin-top: 20px; font-weight: bold; display: block;" />
+        </p>
+    </fieldset>
+}
+

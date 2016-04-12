@@ -1,0 +1,191 @@
+﻿<error errorId="3a9bafb8-1357-42a0-9661-b73000dcc0be" application="/LM/W3SVC/5/ROOT" host="LENOVO-PC" type="System.Data.SqlClient.SqlException" message="New transaction is not allowed because there are other threads running in the session." source=".Net SqlClient Data Provider" detail="System.Data.Entity.Core.EntityException: An error occurred while starting a transaction on the provider connection. See the inner exception for details. ---&gt; System.Data.SqlClient.SqlException: New transaction is not allowed because there are other threads running in the session.&#xD;&#xA;   w System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)&#xD;&#xA;   w System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)&#xD;&#xA;   w System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)&#xD;&#xA;   w System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean&amp; dataReady)&#xD;&#xA;   w System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)&#xD;&#xA;   w System.Data.SqlClient.TdsParser.TdsExecuteTransactionManagerRequest(Byte[] buffer, TransactionManagerRequestType request, String transactionName, TransactionManagerIsolationLevel isoLevel, Int32 timeout, SqlInternalTransaction transaction, TdsParserStateObject stateObj, Boolean isDelegateControlRequest)&#xD;&#xA;   w System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransactionYukon(TransactionRequest transactionRequest, String transactionName, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)&#xD;&#xA;   w System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransaction(TransactionRequest transactionRequest, String name, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)&#xD;&#xA;   w System.Data.SqlClient.SqlInternalConnection.BeginSqlTransaction(IsolationLevel iso, String transactionName, Boolean shouldReconnect)&#xD;&#xA;   w System.Data.SqlClient.SqlConnection.BeginTransaction(IsolationLevel iso, String transactionName)&#xD;&#xA;   w System.Data.SqlClient.SqlConnection.BeginDbTransaction(IsolationLevel isolationLevel)&#xD;&#xA;   w System.Data.Common.DbConnection.BeginTransaction(IsolationLevel isolationLevel)&#xD;&#xA;   w System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.&lt;BeginTransaction&gt;b__0(DbConnection t, BeginTransactionInterceptionContext c)&#xD;&#xA;   w System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)&#xD;&#xA;   w System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.BeginTransaction(DbConnection connection, BeginTransactionInterceptionContext interceptionContext)&#xD;&#xA;   w System.Data.Entity.Core.EntityClient.EntityConnection.&lt;&gt;c__DisplayClassf.&lt;BeginDbTransaction&gt;b__d()&#xD;&#xA;   w System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)&#xD;&#xA;   w System.Data.Entity.Core.EntityClient.EntityConnection.BeginDbTransaction(IsolationLevel isolationLevel)&#xD;&#xA;   --- Koniec śladu stosu wyjątków wewnętrznych ---&#xD;&#xA;   w System.Data.Entity.Core.EntityClient.EntityConnection.BeginDbTransaction(IsolationLevel isolationLevel)&#xD;&#xA;   w System.Data.Entity.Core.EntityClient.EntityConnection.BeginTransaction()&#xD;&#xA;   w System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)&#xD;&#xA;   w System.Data.Entity.Core.Objects.ObjectContext.SaveChangesToStore(SaveOptions options, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction)&#xD;&#xA;   w System.Data.Entity.Core.Objects.ObjectContext.&lt;&gt;c__DisplayClass2a.&lt;SaveChangesInternal&gt;b__27()&#xD;&#xA;   w System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)&#xD;&#xA;   w System.Data.Entity.Core.Objects.ObjectContext.SaveChangesInternal(SaveOptions options, Boolean executeInExistingTransaction)&#xD;&#xA;   w System.Data.Entity.Core.Objects.ObjectContext.SaveChanges(SaveOptions options)&#xD;&#xA;   w System.Data.Entity.Internal.InternalContext.SaveChanges()&#xD;&#xA;   w System.Data.Entity.Internal.LazyInternalContext.SaveChanges()&#xD;&#xA;   w System.Data.Entity.DbContext.SaveChanges()&#xD;&#xA;   w Hurtownia.Controllers.StoreController.Comment(Int32 id, String Text) w c:\PZ\Inzynierka\v2.4\v1.7\Hurtownia\Hurtownia\Controllers\StoreController.cs:wiersz 408&#xD;&#xA;   w lambda_method(Closure , ControllerBase , Object[] )&#xD;&#xA;   w System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)&#xD;&#xA;   w System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)&#xD;&#xA;   w System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;BeginInvokeSynchronousActionMethod&gt;b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   w System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.&lt;InvokeActionMethodFilterAsynchronouslyRecursive&gt;b__3f()&#xD;&#xA;   w System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.&lt;&gt;c__DisplayClass48.&lt;InvokeActionMethodFilterAsynchronouslyRecursive&gt;b__41()&#xD;&#xA;   w System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass33.&lt;BeginInvokeActionMethodWithFilters&gt;b__32(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   w System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass21.&lt;&gt;c__DisplayClass2b.&lt;BeginInvokeAction&gt;b__1c()&#xD;&#xA;   w System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass21.&lt;BeginInvokeAction&gt;b__1e(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   w System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.Controller.&lt;BeginExecuteCore&gt;b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   w System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.Controller.&lt;BeginExecute&gt;b__15(IAsyncResult asyncResult, Controller controller)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   w System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.MvcHandler.&lt;BeginProcessRequest&gt;b__5(IAsyncResult asyncResult, ProcessRequestState innerState)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   w System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)&#xD;&#xA;   w System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()&#xD;&#xA;   w System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)" user="admin@hurtownia.pl" time="2015-10-20T07:03:50.4834689Z">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CACHE_CONTROL:max-age=0&#xD;&#xA;HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_CONTENT_LENGTH:22&#xD;&#xA;HTTP_CONTENT_TYPE:application/x-www-form-urlencoded&#xD;&#xA;HTTP_ACCEPT:text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:pl-PL,pl;q=0.8,en-US;q=0.6,en;q=0.4&#xD;&#xA;HTTP_COOKIE:__RequestVerificationToken=v21QzQA4EsFuFk-5NG6KqyMPUqiMS3uwX0A-w2ZybQ4kIXoJk3Z-FQ7jONP9HjPZ7VnRzn4sIeGjQsnfL3GY9KIcZlOLHe6FNwdRH1YmXXU1; ASP.NET_SessionId=1bxbs1dgsinsjqxucjzbgx3h; .AspNet.ApplicationCookie=2N-0OWgtydRtPOenDlHiFCk53rd3Pdt3Elx28m7INtMlyR_vzD880Z5NzkGkjKU4h4AbaJGMcI09TxObLL21zU5acqaLPHJQilk8ETrZUSJI1-iXIl0qCNPvmaR5k1A-NCyOLj0uEDgcS_u4LwEPRSNX_ZOfn6x8rwLGh2xM7w5xGhqmJRiAugZth2YygDE2-AKXwqeC9K0KdtJLlvRckM_h84JYUQrygw6tGe752r3gTXfwXS_vM4EAn07Obwp_ekn9_D6dy3lxK1pv81tI7Lx5H5J11uvE5fuNX5Mqc4fcD9rev8PqXVdRLt46nB1EdhSSQpJYTbjlWW7CYDhSbIdzD84D7nR9lK8ZS9zDlJDf_r42PrxMgdK8FnpuXRisdLGpT5HhC0QZAOv1QSnYukOANkc1VrbpPUHRq8TW3b-njfZVkLYiw_O1hxDDyqUvc2FpevuC_PtSRAN3bfu-L0GLkYyQjUw03cLEw24CpdV_vtsKjeO1mKpFqOfATONkIy8NjS2RO2cu97rLqItoIw&#xD;&#xA;HTTP_HOST:localhost:44300&#xD;&#xA;HTTP_REFERER:https://localhost:44300/product-2.html&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.71 Safari/537.36&#xD;&#xA;HTTP_ORIGIN:https://localhost:44300&#xD;&#xA;HTTP_UPGRADE_INSECURE_REQUESTS:1&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Cache-Control: max-age=0&#xD;&#xA;Connection: keep-alive&#xD;&#xA;Content-Length: 22&#xD;&#xA;Content-Type: application/x-www-form-urlencoded&#xD;&#xA;Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8&#xD;&#xA;Accept-Encoding: gzip, deflate&#xD;&#xA;Accept-Language: pl-PL,pl;q=0.8,en-US;q=0.6,en;q=0.4&#xD;&#xA;Cookie: __RequestVerificationToken=v21QzQA4EsFuFk-5NG6KqyMPUqiMS3uwX0A-w2ZybQ4kIXoJk3Z-FQ7jONP9HjPZ7VnRzn4sIeGjQsnfL3GY9KIcZlOLHe6FNwdRH1YmXXU1; ASP.NET_SessionId=1bxbs1dgsinsjqxucjzbgx3h; .AspNet.ApplicationCookie=2N-0OWgtydRtPOenDlHiFCk53rd3Pdt3Elx28m7INtMlyR_vzD880Z5NzkGkjKU4h4AbaJGMcI09TxObLL21zU5acqaLPHJQilk8ETrZUSJI1-iXIl0qCNPvmaR5k1A-NCyOLj0uEDgcS_u4LwEPRSNX_ZOfn6x8rwLGh2xM7w5xGhqmJRiAugZth2YygDE2-AKXwqeC9K0KdtJLlvRckM_h84JYUQrygw6tGe752r3gTXfwXS_vM4EAn07Obwp_ekn9_D6dy3lxK1pv81tI7Lx5H5J11uvE5fuNX5Mqc4fcD9rev8PqXVdRLt46nB1EdhSSQpJYTbjlWW7CYDhSbIdzD84D7nR9lK8ZS9zDlJDf_r42PrxMgdK8FnpuXRisdLGpT5HhC0QZAOv1QSnYukOANkc1VrbpPUHRq8TW3b-njfZVkLYiw_O1hxDDyqUvc2FpevuC_PtSRAN3bfu-L0GLkYyQjUw03cLEw24CpdV_vtsKjeO1mKpFqOfATONkIy8NjS2RO2cu97rLqItoIw&#xD;&#xA;Host: localhost:44300&#xD;&#xA;Referer: https://localhost:44300/product-2.html&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.71 Safari/537.36&#xD;&#xA;Origin: https://localhost:44300&#xD;&#xA;Upgrade-Insecure-Requests: 1&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/5/ROOT" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="C:\PZ\Inzynierka\v2.4\v1.7\Hurtownia\Hurtownia\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="ApplicationCookie" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="admin@hurtownia.pl" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="*****" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="admin@hurtownia.pl" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="128" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="1024" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="CN=localhost" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="CN=localhost" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="22" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="application/x-www-form-urlencoded" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="on" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="128" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="1024" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="CN=localhost" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="CN=localhost" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="5" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/5" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/Store/Comment/2" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="C:\PZ\Inzynierka\v2.4\v1.7\Hurtownia\Hurtownia\Store\Comment\2" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="1299" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="POST" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/Store/Comment/2" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="44300" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="1" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/8.0" />
+    </item>
+    <item name="URL">
+      <value string="/Store/Comment/2" />
+    </item>
+    <item name="HTTP_CACHE_CONTROL">
+      <value string="max-age=0" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_CONTENT_LENGTH">
+      <value string="22" />
+    </item>
+    <item name="HTTP_CONTENT_TYPE">
+      <value string="application/x-www-form-urlencoded" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="pl-PL,pl;q=0.8,en-US;q=0.6,en;q=0.4" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="__RequestVerificationToken=v21QzQA4EsFuFk-5NG6KqyMPUqiMS3uwX0A-w2ZybQ4kIXoJk3Z-FQ7jONP9HjPZ7VnRzn4sIeGjQsnfL3GY9KIcZlOLHe6FNwdRH1YmXXU1; ASP.NET_SessionId=1bxbs1dgsinsjqxucjzbgx3h; .AspNet.ApplicationCookie=2N-0OWgtydRtPOenDlHiFCk53rd3Pdt3Elx28m7INtMlyR_vzD880Z5NzkGkjKU4h4AbaJGMcI09TxObLL21zU5acqaLPHJQilk8ETrZUSJI1-iXIl0qCNPvmaR5k1A-NCyOLj0uEDgcS_u4LwEPRSNX_ZOfn6x8rwLGh2xM7w5xGhqmJRiAugZth2YygDE2-AKXwqeC9K0KdtJLlvRckM_h84JYUQrygw6tGe752r3gTXfwXS_vM4EAn07Obwp_ekn9_D6dy3lxK1pv81tI7Lx5H5J11uvE5fuNX5Mqc4fcD9rev8PqXVdRLt46nB1EdhSSQpJYTbjlWW7CYDhSbIdzD84D7nR9lK8ZS9zDlJDf_r42PrxMgdK8FnpuXRisdLGpT5HhC0QZAOv1QSnYukOANkc1VrbpPUHRq8TW3b-njfZVkLYiw_O1hxDDyqUvc2FpevuC_PtSRAN3bfu-L0GLkYyQjUw03cLEw24CpdV_vtsKjeO1mKpFqOfATONkIy8NjS2RO2cu97rLqItoIw" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:44300" />
+    </item>
+    <item name="HTTP_REFERER">
+      <value string="https://localhost:44300/product-2.html" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.71 Safari/537.36" />
+    </item>
+    <item name="HTTP_ORIGIN">
+      <value string="https://localhost:44300" />
+    </item>
+    <item name="HTTP_UPGRADE_INSECURE_REQUESTS">
+      <value string="1" />
+    </item>
+  </serverVariables>
+  <form>
+    <item name="ProductId">
+      <value string="2" />
+    </item>
+    <item name="Text">
+      <value string="hhhhh" />
+    </item>
+  </form>
+  <cookies>
+    <item name="__RequestVerificationToken">
+      <value string="v21QzQA4EsFuFk-5NG6KqyMPUqiMS3uwX0A-w2ZybQ4kIXoJk3Z-FQ7jONP9HjPZ7VnRzn4sIeGjQsnfL3GY9KIcZlOLHe6FNwdRH1YmXXU1" />
+    </item>
+    <item name="ASP.NET_SessionId">
+      <value string="1bxbs1dgsinsjqxucjzbgx3h" />
+    </item>
+    <item name=".AspNet.ApplicationCookie">
+      <value string="2N-0OWgtydRtPOenDlHiFCk53rd3Pdt3Elx28m7INtMlyR_vzD880Z5NzkGkjKU4h4AbaJGMcI09TxObLL21zU5acqaLPHJQilk8ETrZUSJI1-iXIl0qCNPvmaR5k1A-NCyOLj0uEDgcS_u4LwEPRSNX_ZOfn6x8rwLGh2xM7w5xGhqmJRiAugZth2YygDE2-AKXwqeC9K0KdtJLlvRckM_h84JYUQrygw6tGe752r3gTXfwXS_vM4EAn07Obwp_ekn9_D6dy3lxK1pv81tI7Lx5H5J11uvE5fuNX5Mqc4fcD9rev8PqXVdRLt46nB1EdhSSQpJYTbjlWW7CYDhSbIdzD84D7nR9lK8ZS9zDlJDf_r42PrxMgdK8FnpuXRisdLGpT5HhC0QZAOv1QSnYukOANkc1VrbpPUHRq8TW3b-njfZVkLYiw_O1hxDDyqUvc2FpevuC_PtSRAN3bfu-L0GLkYyQjUw03cLEw24CpdV_vtsKjeO1mKpFqOfATONkIy8NjS2RO2cu97rLqItoIw" />
+    </item>
+  </cookies>
+</error>

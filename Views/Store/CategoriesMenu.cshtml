@@ -1,0 +1,26 @@
+﻿@using Hurtownia.Infrastructure
+@model IEnumerable<Hurtownia.Models.Category>
+
+<nav class="categories-vertical">
+    <ul>
+        @foreach (var category in Model)
+        {
+            <li class="btn btn-nav btn-group-lg" style="display: block; color:white; background-size:40px; text-align:center;">
+                @Html.ActionLink(category.NameCategory, "List", "Store", new { categoryname = category.NameCategory.ToLower() }, new {style="color:white;" }@*, new { style = "background-image: url(../Content/Category-icons/" + category.IconFilename + ");"*@ )
+            </li>
+
+        }
+        <li class="btn btn-nav btn-group-lg" style="display: block; color:white; background-size:40px; text-align:center;">
+            @*@Html.ActionLink("Wszystkie Produkty","ShowAllProducts", "Products", new { style = "color:white;" })*@
+            @Html.ActionLink("Promocje", "OurPromotions", "Products", null, new { style = "color:white;" })
+        </li>
+        <li class="btn btn-nav btn-group-lg" style="display: block; color:white; background-size:40px; text-align:center;">
+            @*@Html.ActionLink("Wszystkie Produkty","ShowAllProducts", "Products", new { style = "color:white;" })*@
+            @Html.ActionLink("Wszystkie", "ShowAllProducts", "Products", null, new { style="color:white;"})
+        </li>
+
+
+      
+    </ul>
+</nav>
+

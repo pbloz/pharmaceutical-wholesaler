@@ -1,0 +1,386 @@
+﻿@*@model Hurtownia.Models.CompareItem*@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <meta name="viewport" content="width=device-width" />
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" />
+    @Styles.Render("~/Content/jqueryui")
+    <link href="@Url.Content("~/Content/themes/base/jquery-ui.css")" rel="stylesheet" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+
+
+    <style>
+        .manageLink {
+            height: 42px;
+            float: left;
+            line-height: 40px;
+            font-size: 14px;
+            padding-left: 40px;
+            /*background-color: #585858;*/
+            background-color: #39312E;
+            color: white;
+        }
+
+        a.manageLink, a.manageLink:hover, a.manageLink:visited {
+            color: white;
+        }
+
+        #primary_nav_wrap {
+            margin-top: 15px;
+        }
+
+            #primary_nav_wrap ul {
+                list-style: none;
+                position: relative;
+                float: left;
+                margin: 0;
+                padding: 0;
+            }
+
+                #primary_nav_wrap ul a {
+                    display: block;
+                    color: #333;
+                    text-decoration: none;
+                    font-weight: 700;
+                    font-size: 12px;
+                    line-height: 32px;
+                    padding: 0 15px;
+                    font-family: "HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
+                }
+
+                #primary_nav_wrap ul li {
+                    position: relative;
+                    float: left;
+                    margin: 0;
+                    padding: 0;
+                }
+
+                    #primary_nav_wrap ul li.current-menu-item {
+                        background: #ddd;
+                    }
+
+                    #primary_nav_wrap ul li:hover {
+                        background: #f6f6f6;
+                    }
+
+                #primary_nav_wrap ul ul {
+                    display: none;
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    background: #fff;
+                    padding: 0;
+                }
+
+                    #primary_nav_wrap ul ul li {
+                        float: none;
+                        width: 200px;
+                    }
+
+                    #primary_nav_wrap ul ul a {
+                        line-height: 120%;
+                        padding: 10px 15px;
+                    }
+
+                    #primary_nav_wrap ul ul ul {
+                        top: 0;
+                        left: 100%;
+                    }
+
+                #primary_nav_wrap ul li:hover > ul {
+                    display: block;
+                }
+    </style>
+
+</head>
+<body>
+    <header>
+        <div id="wrapper">
+            @*<div style="overflow: hidden; margin-bottom: 10px;">*@
+            <nav id="primary_nav_wrap">
+                <ul>
+                    <li >
+                        <a href="@Url.Action("Index", "Home")">
+                            Start
+                        </a>
+                    </li>
+                    <li class="current-menu-item">
+                        <a href="@Url.Action("Index", "Manage")">
+                            Twoje dane
+                        </a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("OrdersList", "Manage")" style="width: 100px">
+                            Zamówienia
+                        </a>
+                    </li>
+
+                    <li><a href="https://localhost:44100/Cart/Compare">Porównywarka</a></li>
+
+                    @if (@User.IsInRole("Admin"))
+                    {
+                        <li>
+                            <a href="#">
+                                Produkty
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="@Url.Action("Index", "Products")">
+                                        Wszystkie
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("AddProduct", "Manage")">
+                                        Dodaj
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("AddManyQuality", "Products")">
+                                        Uzupełnij Stan
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("ChangeName", "Products")">
+                                        Zarządzaj nazwami produktów
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("ProductsWithDateEnd", "Products")">
+                                        Produkty z kończącą się datą ważności
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("ProductsDeficit", "Manage")">
+                                        Produkty, których jest mniej niż 1000 na magazynie
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Kategorie
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="@Url.Action("Index", "Categories")">
+                                        Wszystkie
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("Create", "Categories")">
+                                        Dodaj
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Statystyki
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="@Url.Action("MostBuyableClients", "Manage")">
+                                        Klienci, którzy robili zakupy najczęściej
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="@Url.Action("SalesProductsCount", "Manage")">
+                                        Klienci, którzy wydali jednorazowo na zakupach najwięcej
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("MostSellsProducts", "Manage")">
+                                        Produkty, których sprzedano najwięcej
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("TheMostProductsInMagazine", "Manage")">
+                                        Produkty, których jest najwięcej w magazynie
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="@Url.Action("ProductsWithTheLongestDataEnd", "Manage")">
+                                        Produkty, które mają najdłuższą datę ważności
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("ProductsWithTheShortestDataEnd", "Manage")">
+                                        Produkty, które mają najkrótszą datę ważności
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("MostSpentMoneyClients", "Manage")">
+                                        Klienci, którzy wydali najwięcej w naszym sklepie
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Slider
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="@Url.Action("Index", "Sliders")">
+                                        Index
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("Create", "Sliders")">
+                                        Dodaj
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Producenci
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="@Url.Action("Index", "Manufactures")">
+                                        Wszyscy
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("Create", "Manufactures")">
+                                        Dodaj nowego producenta
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    }
+
+                </ul>
+            </nav>
+            <a id="cart-header-link" href="@Url.Action("Index", "Cart")">
+                KOSZYK (<span style="color:white;" id="cart-header-items-count">@Html.Action("GetCartItemsCount", "Cart")</span>)
+                <span id="cart-header-logo"></span>
+            </a>
+
+            @Html.Partial("_LoginPartial")
+
+@*@Html.Partial("_Logo")*@
+
+            @*<a class="manageLink" href="@Url.Action("Index", "Home")">
+                    Start
+                </a>
+                <a class="manageLink" href="@Url.Action("Index", "Manage")">
+                    Twoje dane
+                </a>
+
+
+                @if (@User.IsInRole("Admin"))
+                {
+                    <a class="manageLink" href="@Url.Action("AddProduct", "Manage")">
+                        Dodaj p
+                    </a>
+                    <a class="manageLink" href="@Url.Action("Index", "Products")">
+                        Produkty
+                    </a>
+                    <a class="manageLink" href="@Url.Content("~/hangfire")">
+                            Jobs
+                        </a>
+                    <a class="manageLink" href="@Url.Content("~/elmah")">
+                        Logi
+                    </a>
+                    <a class="manageLink" href="@Url.Action("Index", "Categories")">
+                        Kategorie
+                    </a>
+                    <a class="manageLink" href="@Url.Action("OKategoriach", "Home")">
+                        Staty
+                    </a>
+                }
+                <a class="manageLink" href="@Url.Action("OrdersList", "Manage")" style="width: 100px">
+                    Zamówienia
+                </a>*@
+
+
+
+            @*</div>*@
+            <br />
+
+        </div>
+
+    </header>
+
+    <div>
+        @RenderBody()
+    </div>
+
+    <footer id="footer">
+        <nav>
+            <ul>
+                <li><a href="@Url.Action("StaticContent", "Home", new { viewname = "Onas" })">O nas</a></li>
+                <li><a href="@Url.Action("StaticContent", "Home", new { viewname = "Contact" })">Kontakt</a></li>
+                <li><a href="@Url.Action("StaticContent", "Home", new { viewname = "Wysylka" })">Wysyłka</a></li>
+                <li><a href="@Url.Action("StaticContent", "Home", new { viewname = "Regulamin" })">Regulamin</a></li>
+                <li><a href="@Url.Action("About", "Home")">Porównaj</a></li>
+            </ul>
+        </nav>
+
+
+        <div id="footer-copyright">
+            Copyright &copy;  @DateTime.Now.Year.ToString() by Pbloz
+            
+        </div>
+    </footer>
+    @Scripts.Render("~/bundles/jqueryui")
+
+    @Scripts.Render("~/bundles/bootstrap")
+
+
+    @Scripts.Render("~/bundles/datetime")
+    @RenderSection("ScriptsBottom", required: false)
+</body>
+</html>
+@Scripts.Render("~/bundles/jqueryui")
+@section scripts {
+
+    <script type="text/javascript">
+
+        $(function () {
+
+            $('#AnnualMeetingDate').datetimepicker({
+
+                defaultDate: '@Model.AnnualMeetingDate',
+
+                format: 'L',
+
+                showClose: true,
+
+                showClear: true,
+
+                toolbarPlacement: 'top'
+
+            });
+
+            $('#AnnualMeetingStartTime').datetimepicker({
+
+                defaultDate: '@Model.AnnualMeetingStartTime',
+
+                format: 'LT',
+
+                showClose: true,
+
+                showClear: true,
+
+                toolbarPlacement: 'top',
+
+                stepping: 15
+
+            });
+
+        });
+
+    </script>
+    }

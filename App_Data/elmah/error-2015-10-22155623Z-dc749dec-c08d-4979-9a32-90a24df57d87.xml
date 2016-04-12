@@ -1,0 +1,212 @@
+﻿<error errorId="dc749dec-c08d-4979-9a32-90a24df57d87" application="/LM/W3SVC/2/ROOT" host="KOMPPAWŁA" type="System.Net.Sockets.SocketException" message="Próba połączenia nie powiodła się, ponieważ połączona strona nie odpowiedziała poprawnie po ustalonym okresie czasu lub utworzone połączenie nie powiodło się, ponieważ połączony host nie odpowiedział" source="System" detail="System.Net.Mail.SmtpException: Wysyłanie poczty nie powiodło się. ---&gt; System.IO.IOException: Nie można odczytać danych z połączenia transportowego: Próba połączenia nie powiodła się, ponieważ połączona strona nie odpowiedziała poprawnie po ustalonym okresie czasu lub utworzone połączenie nie powiodło się, ponieważ połączony host nie odpowiedział. ---&gt; System.Net.Sockets.SocketException: Próba połączenia nie powiodła się, ponieważ połączona strona nie odpowiedziała poprawnie po ustalonym okresie czasu lub utworzone połączenie nie powiodło się, ponieważ połączony host nie odpowiedział&#xD;&#xA;   w System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)&#xD;&#xA;   w System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)&#xD;&#xA;   --- Koniec śladu stosu wyjątków wewnętrznych ---&#xD;&#xA;   w System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)&#xD;&#xA;   w System.Net.FixedSizeReader.ReadPacket(Byte[] buffer, Int32 offset, Int32 count)&#xD;&#xA;   w System.Net.Security._SslStream.StartFrameHeader(Byte[] buffer, Int32 offset, Int32 count, AsyncProtocolRequest asyncRequest)&#xD;&#xA;   w System.Net.Security._SslStream.StartReading(Byte[] buffer, Int32 offset, Int32 count, AsyncProtocolRequest asyncRequest)&#xD;&#xA;   w System.Net.Security._SslStream.ProcessRead(Byte[] buffer, Int32 offset, Int32 count, AsyncProtocolRequest asyncRequest)&#xD;&#xA;   w System.Net.TlsStream.Read(Byte[] buffer, Int32 offset, Int32 size)&#xD;&#xA;   w System.Net.DelegatedStream.Read(Byte[] buffer, Int32 offset, Int32 count)&#xD;&#xA;   w System.Net.BufferedReadStream.Read(Byte[] buffer, Int32 offset, Int32 count)&#xD;&#xA;   w System.Net.Mail.SmtpReplyReaderFactory.ReadLines(SmtpReplyReader caller, Boolean oneLine)&#xD;&#xA;   w System.Net.Mail.SmtpReplyReaderFactory.ReadLine(SmtpReplyReader caller)&#xD;&#xA;   w System.Net.Mail.CheckCommand.Send(SmtpConnection conn, String&amp; response)&#xD;&#xA;   w System.Net.Mail.DataStopCommand.Send(SmtpConnection conn)&#xD;&#xA;   w System.Net.Mail.SmtpConnection.OnClose(Object sender, EventArgs args)&#xD;&#xA;   w System.Net.ClosableStream.Close()&#xD;&#xA;   w System.Net.Mail.MailWriter.Close()&#xD;&#xA;   w System.Net.Mail.SmtpClient.Send(MailMessage message)&#xD;&#xA;   --- Koniec śladu stosu wyjątków wewnętrznych ---&#xD;&#xA;   w System.Net.Mail.SmtpClient.Send(MailMessage message)&#xD;&#xA;   w Postal.EmailService.Send(Email email)&#xD;&#xA;   w Postal.Email.Send()&#xD;&#xA;   w Hurtownia.Controllers.CartController.&lt;Checkout&gt;d__f.MoveNext() w c:\v2.5a\v1.7\Hurtownia\Hurtownia\Controllers\CartController.cs:wiersz 304&#xD;&#xA;--- Koniec śladu stosu z poprzedniej lokalizacji, w której wystąpił wyjątek ---&#xD;&#xA;   w System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   w System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   w System.Web.Mvc.Async.TaskAsyncActionDescriptor.EndExecute(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass37.&lt;BeginInvokeAsynchronousActionMethod&gt;b__36(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   w System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.&lt;InvokeActionMethodFilterAsynchronouslyRecursive&gt;b__3f()&#xD;&#xA;   w System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.&lt;&gt;c__DisplayClass48.&lt;InvokeActionMethodFilterAsynchronouslyRecursive&gt;b__41()&#xD;&#xA;   w System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass33.&lt;BeginInvokeActionMethodWithFilters&gt;b__32(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   w System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass21.&lt;&gt;c__DisplayClass2b.&lt;BeginInvokeAction&gt;b__1c()&#xD;&#xA;   w System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass21.&lt;BeginInvokeAction&gt;b__1e(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   w System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.Controller.&lt;BeginExecuteCore&gt;b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   w System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.Controller.&lt;BeginExecute&gt;b__15(IAsyncResult asyncResult, Controller controller)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   w System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.MvcHandler.&lt;BeginProcessRequest&gt;b__5(IAsyncResult asyncResult, ProcessRequestState innerState)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   w System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)&#xD;&#xA;   w System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)&#xD;&#xA;   w System.Web.HttpApplication.CallHandlerExecutionStep.OnAsyncHandlerCompletion(IAsyncResult ar)" user="pks11@vp.pl" time="2015-10-22T15:56:23.3466222Z">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CACHE_CONTROL:max-age=0&#xD;&#xA;HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_CONTENT_LENGTH:120&#xD;&#xA;HTTP_CONTENT_TYPE:application/x-www-form-urlencoded&#xD;&#xA;HTTP_ACCEPT:text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:pl-PL,pl;q=0.8,en-US;q=0.6,en;q=0.4&#xD;&#xA;HTTP_COOKIE:__RequestVerificationToken=IL_XIRms7kJSPcXrq8w6OlapAivhsc2v0Awyy6AVouvJoLyToltHe5YUCFSMzy3IcnjnwXWSnuKJGh1OEaZojcX4GE1PvsShJsoiqSo2fEo1; ASP.NET_SessionId=bbqzmlgbzgv113cx35zyagpc; .AspNet.ApplicationCookie=gm42YPlK-8FazRhuyOn6w0XTFyeHlBzIImga46l7945nwPmf-621agR-kISINizoFtdHG2F0Gx-Z91wOnoyvJg-bdCQOjApKVPVFdAnnWXsKF_wvBjEgX2Iqf8PhlUq9CqUenkdoKtbtLR3mWHcq65s2e_Bh4Rxv04EFRCdaEB1zEYJGeNmm-tvXI3IBInGhoN8C2i6_l-pHfC3uJagMMDqLjL_nvyqbfiALBtWrhPyo0j7X9M4CNp8a7WBJq4DJgzUtMmb5Spi21_AdTvvoxmBIhoLloWPvfopTgT8VuzO08GugRfxDiGZsCoCsgvp4wa2yQ-oLAhUbKB5QDkw0ZQsPsuWxkxmNpQx7hlZTy0kw7cC2PNiuApRN1bRhIaO6nzOkWot-5Sqcv5jg3lpt4CniOLruXn1VberCSBMMkuSQLEj5prwrDe_rQd-QNenZY0V_FFI-t4yCl8dRJw0-lRORIWAshc4zoSnCARIBiso&#xD;&#xA;HTTP_HOST:localhost:44300&#xD;&#xA;HTTP_REFERER:https://localhost:44300/Cart/Checkout&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.71 Safari/537.36&#xD;&#xA;HTTP_ORIGIN:https://localhost:44300&#xD;&#xA;HTTP_UPGRADE_INSECURE_REQUESTS:1&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Cache-Control: max-age=0&#xD;&#xA;Connection: keep-alive&#xD;&#xA;Content-Length: 120&#xD;&#xA;Content-Type: application/x-www-form-urlencoded&#xD;&#xA;Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8&#xD;&#xA;Accept-Encoding: gzip, deflate&#xD;&#xA;Accept-Language: pl-PL,pl;q=0.8,en-US;q=0.6,en;q=0.4&#xD;&#xA;Cookie: __RequestVerificationToken=IL_XIRms7kJSPcXrq8w6OlapAivhsc2v0Awyy6AVouvJoLyToltHe5YUCFSMzy3IcnjnwXWSnuKJGh1OEaZojcX4GE1PvsShJsoiqSo2fEo1; ASP.NET_SessionId=bbqzmlgbzgv113cx35zyagpc; .AspNet.ApplicationCookie=gm42YPlK-8FazRhuyOn6w0XTFyeHlBzIImga46l7945nwPmf-621agR-kISINizoFtdHG2F0Gx-Z91wOnoyvJg-bdCQOjApKVPVFdAnnWXsKF_wvBjEgX2Iqf8PhlUq9CqUenkdoKtbtLR3mWHcq65s2e_Bh4Rxv04EFRCdaEB1zEYJGeNmm-tvXI3IBInGhoN8C2i6_l-pHfC3uJagMMDqLjL_nvyqbfiALBtWrhPyo0j7X9M4CNp8a7WBJq4DJgzUtMmb5Spi21_AdTvvoxmBIhoLloWPvfopTgT8VuzO08GugRfxDiGZsCoCsgvp4wa2yQ-oLAhUbKB5QDkw0ZQsPsuWxkxmNpQx7hlZTy0kw7cC2PNiuApRN1bRhIaO6nzOkWot-5Sqcv5jg3lpt4CniOLruXn1VberCSBMMkuSQLEj5prwrDe_rQd-QNenZY0V_FFI-t4yCl8dRJw0-lRORIWAshc4zoSnCARIBiso&#xD;&#xA;Host: localhost:44300&#xD;&#xA;Referer: https://localhost:44300/Cart/Checkout&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.71 Safari/537.36&#xD;&#xA;Origin: https://localhost:44300&#xD;&#xA;Upgrade-Insecure-Requests: 1&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/2/ROOT" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="C:\v2.5a\v1.7\Hurtownia\Hurtownia\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="ApplicationCookie" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="pks11@vp.pl" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="*****" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="pks11@vp.pl" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="128" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="1024" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="CN=localhost" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="CN=localhost" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="120" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="application/x-www-form-urlencoded" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="on" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="128" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="1024" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="CN=localhost" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="CN=localhost" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="2" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/2" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/Cart/Checkout" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="C:\v2.5a\v1.7\Hurtownia\Hurtownia\Cart\Checkout" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="47540" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="POST" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/Cart/Checkout" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="44300" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="1" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/8.0" />
+    </item>
+    <item name="URL">
+      <value string="/Cart/Checkout" />
+    </item>
+    <item name="HTTP_CACHE_CONTROL">
+      <value string="max-age=0" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_CONTENT_LENGTH">
+      <value string="120" />
+    </item>
+    <item name="HTTP_CONTENT_TYPE">
+      <value string="application/x-www-form-urlencoded" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="pl-PL,pl;q=0.8,en-US;q=0.6,en;q=0.4" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="__RequestVerificationToken=IL_XIRms7kJSPcXrq8w6OlapAivhsc2v0Awyy6AVouvJoLyToltHe5YUCFSMzy3IcnjnwXWSnuKJGh1OEaZojcX4GE1PvsShJsoiqSo2fEo1; ASP.NET_SessionId=bbqzmlgbzgv113cx35zyagpc; .AspNet.ApplicationCookie=gm42YPlK-8FazRhuyOn6w0XTFyeHlBzIImga46l7945nwPmf-621agR-kISINizoFtdHG2F0Gx-Z91wOnoyvJg-bdCQOjApKVPVFdAnnWXsKF_wvBjEgX2Iqf8PhlUq9CqUenkdoKtbtLR3mWHcq65s2e_Bh4Rxv04EFRCdaEB1zEYJGeNmm-tvXI3IBInGhoN8C2i6_l-pHfC3uJagMMDqLjL_nvyqbfiALBtWrhPyo0j7X9M4CNp8a7WBJq4DJgzUtMmb5Spi21_AdTvvoxmBIhoLloWPvfopTgT8VuzO08GugRfxDiGZsCoCsgvp4wa2yQ-oLAhUbKB5QDkw0ZQsPsuWxkxmNpQx7hlZTy0kw7cC2PNiuApRN1bRhIaO6nzOkWot-5Sqcv5jg3lpt4CniOLruXn1VberCSBMMkuSQLEj5prwrDe_rQd-QNenZY0V_FFI-t4yCl8dRJw0-lRORIWAshc4zoSnCARIBiso" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:44300" />
+    </item>
+    <item name="HTTP_REFERER">
+      <value string="https://localhost:44300/Cart/Checkout" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.71 Safari/537.36" />
+    </item>
+    <item name="HTTP_ORIGIN">
+      <value string="https://localhost:44300" />
+    </item>
+    <item name="HTTP_UPGRADE_INSECURE_REQUESTS">
+      <value string="1" />
+    </item>
+  </serverVariables>
+  <form>
+    <item name="FirstName">
+      <value string="P" />
+    </item>
+    <item name="LastName">
+      <value string="K" />
+    </item>
+    <item name="Factory">
+      <value string="K" />
+    </item>
+    <item name="Nip">
+      <value string="222-11-11-111" />
+    </item>
+    <item name="Address">
+      <value string="wke" />
+    </item>
+    <item name="CodeAndCity">
+      <value string="sks" />
+    </item>
+    <item name="PhoneNumber">
+      <value string="" />
+    </item>
+    <item name="Email">
+      <value string="pks11@vp.pl" />
+    </item>
+    <item name="comment">
+      <value string="" />
+    </item>
+  </form>
+  <cookies>
+    <item name="__RequestVerificationToken">
+      <value string="IL_XIRms7kJSPcXrq8w6OlapAivhsc2v0Awyy6AVouvJoLyToltHe5YUCFSMzy3IcnjnwXWSnuKJGh1OEaZojcX4GE1PvsShJsoiqSo2fEo1" />
+    </item>
+    <item name="ASP.NET_SessionId">
+      <value string="bbqzmlgbzgv113cx35zyagpc" />
+    </item>
+    <item name=".AspNet.ApplicationCookie">
+      <value string="gm42YPlK-8FazRhuyOn6w0XTFyeHlBzIImga46l7945nwPmf-621agR-kISINizoFtdHG2F0Gx-Z91wOnoyvJg-bdCQOjApKVPVFdAnnWXsKF_wvBjEgX2Iqf8PhlUq9CqUenkdoKtbtLR3mWHcq65s2e_Bh4Rxv04EFRCdaEB1zEYJGeNmm-tvXI3IBInGhoN8C2i6_l-pHfC3uJagMMDqLjL_nvyqbfiALBtWrhPyo0j7X9M4CNp8a7WBJq4DJgzUtMmb5Spi21_AdTvvoxmBIhoLloWPvfopTgT8VuzO08GugRfxDiGZsCoCsgvp4wa2yQ-oLAhUbKB5QDkw0ZQsPsuWxkxmNpQx7hlZTy0kw7cC2PNiuApRN1bRhIaO6nzOkWot-5Sqcv5jg3lpt4CniOLruXn1VberCSBMMkuSQLEj5prwrDe_rQd-QNenZY0V_FFI-t4yCl8dRJw0-lRORIWAshc4zoSnCARIBiso" />
+    </item>
+  </cookies>
+</error>
